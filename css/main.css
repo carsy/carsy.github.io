@@ -65,6 +65,13 @@ body {
     background: #202020;
 }
 
+@font-face {
+  font-family: 'Sue Ellen Francisco';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sue Ellen Francisco '), local('SueEllenFrancisco'), url(http://themes.googleusercontent.com/static/fonts/sueellenfrancisco/v4/TwHX4vSxMUnJUdEz1JIgrrtXaZAN_aGv07JTA91X2HI.woff) format('woff');
+}
+
 .all-the-things {
     color: #808080;
     position: fixed;
@@ -80,7 +87,6 @@ body {
     font-family: 'Sue Ellen Francisco', cursive;
     font-size: 30px;
 }
-
 
 
 
