@@ -3,5 +3,5 @@
 subl &
 python -m SimpleHTTPServer &
 sass --watch css/main.scss:css/main.css &
-google-chrome --incognito http://carsy-laptop:8000  &
-firefox --private http://carsy-laptop:8000  &
+google-chrome --incognito http://localhost:8000  &
+firefox --private http://localhost:8000  &

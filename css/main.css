@@ -54,8 +54,9 @@ html, body {
   height: 100%; }
 
 body {
-  background: #202020;
-  min-height: 100%; }
+  background: #181818;
+  min-height: 100%;
+  font-size: 16px; }
 
 @font-face {
   font-family: 'Sue Ellen Francisco';
@@ -69,52 +70,56 @@ body {
   font-weight: 400;
   src: local("Gloria Hallelujah"), local("GloriaHallelujah"), url(http://themes.googleusercontent.com/static/fonts/gloriahallelujah/v4/CA1k7SlXcY5kvI81M_R28Y5mSNQmgKshuii2YddNQzE.woff) format("woff"); }
 
-.header {
+.nav {
   position: relative;
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  width: 100%;
-  height: 100%; }
-  .header .container {
-    padding-top: 20%;
+  height: 100%;
+  padding-top: 100px; }
+  .nav .content {
+    color: #cccccc;
+    background: #303030;
+    box-shadow: 0px 1px 3px black;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    margin-bottom: 20px;
     cursor: hand;
     cursor: pointer; }
-    .header .container .content {
-      height: 150px;
-      padding: 20px;
-      color: #cccccc;
-      background: #303030; }
-      .header .container .content:hover {
+    .nav .content:hover {
+      color: white;
+      background: #363636; }
+      .nav .content:hover .content-title {
+        color: #cccccc; }
+    .nav .content * {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+      opacity: 0.8; }
+    .nav .content:hover * {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1; }
+    .nav .content span {
+      font-size: 1.25em;
+      text-align: left;
+      font-family: 'Sue Ellen Francisco', cursive; }
+    .nav .content .content-header, .nav .content .content-container {
+      padding: 20px 10px 20px 10px; }
+    .nav .content .content-header {
+      background: #202020; }
+      .nav .content .content-header .content-title {
+        text-align: center;
+        padding-top: 30px;
         color: white;
-        background: #404040; }
-        .header .container .content:hover .content-title {
-          color: #cccccc; }
-      .header .container .content * {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-        opacity: 0.8; }
-      .header .container .content:hover * {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1; }
-      .header .container .content span {
+        opacity: 1;
+        font-size: 1.25em;
+        font-weight: bold; }
+      .nav .content .content-header img {
         display: block;
-        font-size: 20px;
-        font-family: 'Sue Ellen Francisco', cursive; }
-        .header .container .content span.content-title {
-          color: white;
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-          opacity: 1;
-          font-size: 20px;
-          font-weight: bold;
-          float: right; }
-        .header .container .content span.content-name {
-          font-size: 50px; }
-      .header .container .content img {
-        height: 100%;
-        width: auto; }
+        margin-right: auto;
+        margin-left: auto; }
+    .nav .content .content-container .content-name {
+      font-size: 2.4em; }
 
 /* ==========================================================================
    Media Queries
