@@ -81,6 +81,12 @@ body {
 
     font-size: 16px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 @font-face {
   font-family: 'Amatic SC';
   font-style: normal;
@@ -123,10 +129,6 @@ body {
             margin-bottom: 20px;
         }
 
-
-        cursor: hand;
-        cursor: pointer;
-
         &:hover {
             color: white;
             background: $bg_hover;
@@ -159,7 +161,7 @@ body {
         }
 
         .content-header, .content-container {
-            padding: 20px 10px 20px 10px;
+            padding: 20px 5px 20px 5px;
         }
 
         .content-header {
@@ -193,14 +195,37 @@ body {
 
         .content-container {
             .content-text {
-                margin-top: 5px;
                 font-size: 0.9em;
+                padding-left: 5px;
 
-                img {
-                    height: 100px;
-                    width: auto;
+                .emphasize {
+                    display: inline-block;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+
                 }
             }
+
+            img {
+                float: right;
+                padding-right: 5px;
+            }
+
+            .content-links-list {
+                span {
+                    cursor: pointer;
+                    cursor: hand;
+                    color: #888888;
+
+                    a { color: #888888; }
+
+                    &:hover a, &:hover {
+                        color: white;
+                    }
+                }
+            }
+
         }
 
         &.about .content-img {
