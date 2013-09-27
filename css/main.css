@@ -122,8 +122,8 @@ body {
       height: 180px;
       position: relative; }
       .nav .nav-item .content-header .content-title {
-        font-family: 'Amatic SC', cursive;
-        font-size: 1.8em;
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 1.4em;
         text-align: center;
         letter-spacing: 2px;
         color: white;
@@ -138,7 +138,8 @@ body {
         margin-right: auto;
         margin-left: auto; }
     .nav .nav-item .content-container .content-text {
-      margin-top: 5px; }
+      margin-top: 5px;
+      font-size: 0.9em; }
       .nav .nav-item .content-container .content-text img {
         height: 100px;
         width: auto; }
