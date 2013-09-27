@@ -59,23 +59,35 @@ body {
   font-size: 16px; }
 
 @font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Anaheim';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Anaheim"), local("Anaheim-Regular"), url(http://themes.googleusercontent.com/static/fonts/anaheim/v1/9grF9iDBrnUvUAGLpfiBHQ.woff) format("woff"); }
+
+@font-face {
   font-family: 'Sue Ellen Francisco';
   font-style: normal;
   font-weight: 400;
   src: local("Sue Ellen Francisco "), local("SueEllenFrancisco"), url(http://themes.googleusercontent.com/static/fonts/sueellenfrancisco/v4/TwHX4vSxMUnJUdEz1JIgrrtXaZAN_aGv07JTA91X2HI.woff) format("woff"); }
 
 @font-face {
-  font-family: 'Gloria Hallelujah';
+  font-family: 'Waiting for the Sunrise';
   font-style: normal;
   font-weight: 400;
-  src: local("Gloria Hallelujah"), local("GloriaHallelujah"), url(http://themes.googleusercontent.com/static/fonts/gloriahallelujah/v4/CA1k7SlXcY5kvI81M_R28Y5mSNQmgKshuii2YddNQzE.woff) format("woff"); }
+  src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff"); }
 
 .nav {
   position: relative;
   padding-top: 40px; }
   .nav .nav-item {
     color: #cccccc;
-    background: #303030;
+    background: #282828;
     box-shadow: 0px 1px 3px black;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -97,10 +109,12 @@ body {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
+    .nav .nav-item:hover .content-title {
+      font-weight: bold; }
     .nav .nav-item span {
-      font-size: 1.25em;
+      font-size: 1em;
       text-align: left;
-      font-family: 'Sue Ellen Francisco', cursive; }
+      font-family: 'Anaheim', cursive; }
     .nav .nav-item .content-header, .nav .nav-item .content-container {
       padding: 20px 10px 20px 10px; }
     .nav .nav-item .content-header {
@@ -108,10 +122,10 @@ body {
       height: 180px;
       position: relative; }
       .nav .nav-item .content-header .content-title {
+        font-family: 'Amatic SC', cursive;
+        font-size: 1.8em;
         text-align: center;
         letter-spacing: 2px;
-        font-size: 1.5em;
-        font-weight: bold;
         color: white;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -123,9 +137,18 @@ body {
         display: block;
         margin-right: auto;
         margin-left: auto; }
-    .nav .nav-item .content-container .content-name {
-      font-size: 2.8em;
-      margin-bottom: 30px; }
+    .nav .nav-item .content-container .content-text {
+      margin-top: 5px; }
+      .nav .nav-item .content-container .content-text img {
+        height: 100px;
+        width: auto; }
+
+footer {
+  margin-top: 35px; }
+  footer .signature {
+    color: #a0a0a0;
+    font-family: 'Waiting for the Sunrise', cursive;
+    letter-spacing: 2px; }
 
 /* ==========================================================================
    Media Queries
