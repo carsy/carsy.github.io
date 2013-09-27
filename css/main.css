@@ -72,54 +72,60 @@ body {
 
 .nav {
   position: relative;
-  height: 100%;
-  padding-top: 100px; }
-  .nav .content {
+  padding-top: 40px; }
+  .nav .nav-item {
     color: #cccccc;
     background: #303030;
     box-shadow: 0px 1px 3px black;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px;
-    margin-bottom: 20px;
     cursor: hand;
     cursor: pointer; }
-    .nav .content:hover {
+    .nav .nav-item.about, .nav .nav-item.work {
+      margin-bottom: 20px; }
+    .nav .nav-item:hover {
       color: white;
       background: #363636; }
-      .nav .content:hover .content-title {
+      .nav .nav-item:hover .content-title {
         color: #cccccc; }
-    .nav .content * {
+    .nav .nav-item * {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
       opacity: 0.8; }
-    .nav .content:hover * {
+    .nav .nav-item:hover * {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-    .nav .content span {
+    .nav .nav-item span {
       font-size: 1.25em;
       text-align: left;
       font-family: 'Sue Ellen Francisco', cursive; }
-    .nav .content .content-header, .nav .content .content-container {
+    .nav .nav-item .content-header, .nav .nav-item .content-container {
       padding: 20px 10px 20px 10px; }
-    .nav .content .content-header {
-      background: #202020; }
-      .nav .content .content-header .content-title {
+    .nav .nav-item .content-header {
+      background: #202020;
+      height: 180px;
+      position: relative; }
+      .nav .nav-item .content-header .content-title {
         text-align: center;
-        padding-top: 30px;
+        letter-spacing: 2px;
+        font-size: 1.5em;
+        font-weight: bold;
         color: white;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1;
-        font-size: 1.25em;
-        font-weight: bold; }
-      .nav .content .content-header img {
+        opacity: 1; }
+      .nav .nav-item .content-header .content-img {
+        position: absolute;
+        text-align: center; }
+      .nav .nav-item .content-header img {
         display: block;
         margin-right: auto;
         margin-left: auto; }
-    .nav .content .content-container .content-name {
-      font-size: 2.4em; }
+    .nav .nav-item .content-container .content-name {
+      font-size: 2.8em;
+      margin-bottom: 30px; }
 
 /* ==========================================================================
    Media Queries

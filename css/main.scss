@@ -98,11 +98,9 @@ body {
 
 .nav {
     position: relative;
+    padding-top: 40px;
 
-    height: 100%;
-    padding-top: 100px;
-
-    .content {
+    .nav-item {
         color: $font_dim;
         background: $bg_header;
 
@@ -112,7 +110,9 @@ body {
         -moz-border-radius: 1px;
         border-radius: 1px;
 
-        margin-bottom: 20px;
+        &.about, &.work {
+            margin-bottom: 20px;
+        }
 
 
         cursor: hand;
@@ -143,7 +143,6 @@ body {
             font-size: 1.25em;
             text-align: left;
             font-family: 'Sue Ellen Francisco', cursive;
-
         }
 
         .content-header, .content-container {
@@ -152,19 +151,26 @@ body {
 
         .content-header {
             background: $bg_header1;
-
+            height: 180px;
+            position: relative;
 
             .content-title {
                 text-align: center;
-                padding-top: 30px;
-
+                letter-spacing: 2px;
+                font-size: 1.5em;
+                font-weight: bold;
                 color: $font_hover;
+
                 -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
                 filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
                 opacity: 1;
 
-                font-size: 1.25em;
-                font-weight: bold;
+            }
+
+            .content-img {
+                position: absolute;
+                // bottom: 20px;
+                text-align: center;
             }
 
             img {
@@ -176,9 +182,22 @@ body {
 
         .content-container {
             .content-name {
-                font-size: 2.4em;
+                font-size: 2.8em;
+                margin-bottom: 30px;
             }
         }
+
+        &.about .content-img {
+            // background-image: url(../img/about-header.jpeg);
+            // background-repeat: no-repeat;
+            // background-position: 10px;
+            // display: block;
+            // margin-right: auto;
+            // margin-left: auto;
+            // height: 80px;
+        }
+
+
     }
 
 }
