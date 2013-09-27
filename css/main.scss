@@ -161,17 +161,17 @@ a {
         }
 
         .content-header, .content-container {
-            padding: 20px 5px 20px 5px;
+            padding: 20px 0px 20px 0px;
         }
 
         .content-header {
             background: $bg_header1;
-            height: 180px;
+            height: 220px;
             position: relative;
 
             .content-title {
                 font-family: 'Sue Ellen Francisco', cursive;
-                font-size: 1.4em;
+                font-size: 1.3em;
                 text-align: center;
                 letter-spacing: 2px;
                 color: $font_hover;
@@ -196,29 +196,22 @@ a {
         .content-container {
             .content-text {
                 font-size: 0.9em;
-                padding-left: 5px;
 
-                .emphasize {
-                    display: inline-block;
-                    font-size: 1.3em;
-                    font-weight: bold;
-                    margin-bottom: 20px;
-
-                }
             }
 
-            img {
-                float: right;
-                padding-right: 5px;
+            .emphasize {
+                display: inline-block;
+                font-size: 1.3em;
+                font-weight: bold;
             }
 
             .content-links-list {
                 span {
                     cursor: pointer;
                     cursor: hand;
-                    color: #888888;
+                    color: #aaaaaa;
 
-                    a { color: #888888; }
+                    a { color: #aaaaaa; }
 
                     &:hover a, &:hover {
                         color: white;
