@@ -116,8 +116,8 @@ a {
     padding-top: 40px;
 
     .nav-item {
-        color: $font_dim;
-        background: $bg_header;
+        color: white;
+        background: $bg_hover;
 
         box-shadow: 0px 1px 3px black;
 
@@ -129,29 +129,8 @@ a {
             margin-bottom: 20px;
         }
 
-        &:hover {
-            color: white;
-            background: $bg_hover;
-
-            .content-title {
-                color: $font_dim;
-            }
-        }
-
-        * {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-            opacity: 0.8;
-        }
-
-        &:hover * {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-            opacity: 1;
-        }
-
-        &:hover .content-title {
-            font-weight: bold;
+        .content-title {
+            color: $font_dim;
         }
 
         span {
@@ -175,10 +154,6 @@ a {
                 text-align: center;
                 letter-spacing: 2px;
                 color: $font_hover;
-
-                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-                opacity: 1;
             }
 
             .content-img {

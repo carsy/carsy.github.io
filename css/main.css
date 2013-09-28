@@ -90,29 +90,16 @@ a {
   position: relative;
   padding-top: 40px; }
   .nav .nav-item {
-    color: #cccccc;
-    background: #282828;
+    color: white;
+    background: #363636;
     box-shadow: 0px 1px 3px black;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
     border-radius: 1px; }
     .nav .nav-item.about, .nav .nav-item.work {
       margin-bottom: 20px; }
-    .nav .nav-item:hover {
-      color: white;
-      background: #363636; }
-      .nav .nav-item:hover .content-title {
-        color: #cccccc; }
-    .nav .nav-item * {
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-      opacity: 0.8; }
-    .nav .nav-item:hover * {
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-      opacity: 1; }
-    .nav .nav-item:hover .content-title {
-      font-weight: bold; }
+    .nav .nav-item .content-title {
+      color: #cccccc; }
     .nav .nav-item span {
       font-size: 1em;
       text-align: left;
@@ -128,10 +115,7 @@ a {
         font-size: 1.3em;
         text-align: center;
         letter-spacing: 2px;
-        color: white;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-        opacity: 1; }
+        color: white; }
       .nav .nav-item .content-header .content-img {
         position: absolute;
         text-align: center; }
