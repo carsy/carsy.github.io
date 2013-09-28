@@ -141,14 +141,16 @@ a {
         margin-left: auto; }
     .nav .nav-item .content-container .content-text {
       font-size: 0.9em; }
+      .nav .nav-item .content-container .content-text .link {
+        font-weight: bold;
+        letter-spacing: 1px; }
     .nav .nav-item .content-container .emphasize {
-      display: inline-block;
-      font-size: 1.3em;
-      font-weight: bold; }
+      font-size: 1.5em; }
     .nav .nav-item .content-container .content-links-list span {
       cursor: pointer;
       cursor: hand;
-      color: #aaaaaa; }
+      color: #aaaaaa;
+      text-align: center; }
       .nav .nav-item .content-container .content-links-list span a {
         color: #aaaaaa; }
       .nav .nav-item .content-container .content-links-list span:hover a, .nav .nav-item .content-container .content-links-list span:hover {

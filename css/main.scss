@@ -197,12 +197,14 @@ a {
             .content-text {
                 font-size: 0.9em;
 
+                .link {
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
             }
 
             .emphasize {
-                display: inline-block;
-                font-size: 1.3em;
-                font-weight: bold;
+                font-size: 1.5em;
             }
 
             .content-links-list {
@@ -210,6 +212,7 @@ a {
                     cursor: pointer;
                     cursor: hand;
                     color: #aaaaaa;
+                    text-align: center;
 
                     a { color: #aaaaaa; }
 
@@ -218,7 +221,6 @@ a {
                     }
                 }
             }
-
         }
 
         &.about .content-img {
