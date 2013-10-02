@@ -131,6 +131,9 @@ a.symbol:before {
       opacity: 1; }
     .nav .nav-item.about, .nav .nav-item.work {
       margin-bottom: 20px; }
+    .nav .nav-item.about img {
+      height: auto;
+      width: 80px; }
     .nav .nav-item .content-title {
       color: #cccccc; }
     .nav .nav-item span {

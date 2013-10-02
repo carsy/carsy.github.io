@@ -172,6 +172,11 @@ a.symbol:before {
             margin-bottom: 20px;
         }
 
+        &.about img {
+            height: auto;
+            width: 80px;
+        }
+
         .content-title {
             color: $font_dim;
         }
