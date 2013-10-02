@@ -111,6 +111,39 @@ a {
   font-weight: 400;
   src: local('Waiting for the Sunrise'), local('WaitingfortheSunrise'), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format('woff');
 }
+
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font' !important;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
+
 .nav {
     position: relative;
     padding-top: 40px;
@@ -125,6 +158,16 @@ a {
         -moz-border-radius: 1px;
         border-radius: 1px;
 
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+        opacity: 0.8;
+
+        &:hover {
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+            opacity: 1;
+        }
+        
         &.about, &.work {
             margin-bottom: 20px;
         }
@@ -135,7 +178,6 @@ a {
 
         span {
             font-size: 1em;
-            text-align: left;
             font-family: 'Anaheim', cursive;
         }
 
@@ -145,8 +187,9 @@ a {
 
         .content-header {
             background: $bg_header1;
-            height: 220px;
+            height: 225px;
             position: relative;
+
 
             .content-title {
                 font-family: 'Sue Ellen Francisco', cursive;
@@ -183,16 +226,22 @@ a {
             }
 
             .content-links-list {
-                span {
-                    cursor: pointer;
-                    cursor: hand;
+                a {
                     color: #aaaaaa;
-                    text-align: center;
+                    font-size: 3em;
+                    margin-left: -0.4em;
 
                     a { color: #aaaaaa; }
 
                     &:hover a, &:hover {
                         color: white;
+                    }
+                }
+
+                .link {
+                    text-align: center;
+                    a {
+                        margin-left: 0;
                     }
                 }
             }
