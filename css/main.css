@@ -133,7 +133,15 @@ a.symbol:before {
       margin-bottom: 20px; }
     .nav .nav-item.about img {
       height: auto;
-      width: 80px; }
+      width: 80px;
+      margin-top: 30px;
+      -webkit-filter: grayscale(100%);
+      -moz-filter: grayscale(100%);
+      -o-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px; }
     .nav .nav-item .content-title {
       color: #cccccc; }
     .nav .nav-item span {
@@ -158,11 +166,9 @@ a.symbol:before {
         display: block;
         margin-right: auto;
         margin-left: auto; }
-    .nav .nav-item .content-container .content-text {
-      font-size: 0.9em; }
-      .nav .nav-item .content-container .content-text .link {
-        font-weight: bold;
-        letter-spacing: 1px; }
+    .nav .nav-item .content-container .content-text .link {
+      font-weight: bold;
+      letter-spacing: 1px; }
     .nav .nav-item .content-container .emphasize {
       font-size: 1.5em; }
     .nav .nav-item .content-container .content-links-list a {

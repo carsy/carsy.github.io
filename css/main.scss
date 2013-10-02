@@ -175,6 +175,16 @@ a.symbol:before {
         &.about img {
             height: auto;
             width: 80px;
+            margin-top: 30px;
+
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
         }
 
         .content-title {
@@ -218,8 +228,6 @@ a.symbol:before {
 
         .content-container {
             .content-text {
-                font-size: 0.9em;
-
                 .link {
                     font-weight: bold;
                     letter-spacing: 1px;
