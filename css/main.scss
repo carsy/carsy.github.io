@@ -62,30 +62,6 @@ textarea {
 
 /***** COLORS *****/
 
-$bg: #181818;
-$bg_header1: #202020;
-$bg_header: #282828;
-$bg_hover: #363636;
-
-/* font colors */
-$font_dim: #cccccc;
-$font_hover: white;
-
-html, body {
-    height: 100%;
-}
-
-body {
-    background: $bg;
-    min-height: 100%;
-
-    font-size: 16px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
 
 @font-face {
   font-family: 'Amatic SC';
@@ -144,131 +120,56 @@ a.symbol:before {
     font-size: 130%;
 }
 
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: white;
+    min-height: 100%;
+
+    font-size: 16px;
+}
+
+* {
+    text-decoration: none;
+    color: white;
+}
+
+
 .nav {
     position: relative;
     padding-top: 40px;
 
     .nav-item {
-        color: white;
-        background: $bg_hover;
+        padding: 20px 0px 20px 0px;
+        margin-bottom: 20px;
+        min-height: 200px;
 
-        box-shadow: 0px 1px 3px black;
+        box-shadow: 0px 1px 1px gray;
 
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
+        font-family: 'Sue Ellen Francisco', cursive;
+        font-size: 4em;
+        text-align: center;
 
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-        opacity: 0.8;
 
-        &:hover {
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-            opacity: 1;
+        &.about {
+            background: #0072c6;
+        }
+
+        &.work {
+            background: #00bcf2;
+        }
+
+        &.contacts {
+            background: #ec863a;
+        }
+
+        &.misc {
+            background: #7fba00;
         }
         
-        &.about, &.work {
-            margin-bottom: 20px;
-        }
-
-        &.about img {
-            height: auto;
-            width: 80px;
-            margin-top: 30px;
-
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-            filter: grayscale(100%);
-
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
-        }
-
-        .content-title {
-            color: $font_dim;
-        }
-
-        span {
-            font-size: 1em;
-            font-family: 'Anaheim', cursive;
-        }
-
-        .content-header, .content-container {
-            padding: 20px 0px 20px 0px;
-        }
-
-        .content-header {
-            background: $bg_header1;
-            height: 225px;
-            position: relative;
-
-            -webkit-border-radius: 5px 0px 0px 5px;
-            -moz-border-radius: 5px 0px 0px 5px;
-            border-radius: 5px 0px 0px 5px;
-
-
-            .content-title {
-                font-family: 'Sue Ellen Francisco', cursive;
-                font-size: 1.3em;
-                text-align: center;
-                letter-spacing: 2px;
-                color: $font_hover;
-            }
-
-            .content-img {
-                position: absolute;
-                text-align: center;
-            }
-
-            img {
-                display: block;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
-
-        .content-container {
-            .content-text {
-                .link {
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                }
-            }
-
-            .emphasize {
-                font-size: 1.5em;
-            }
-
-            .content-links-list {
-                a {
-                    float: left;
-                    color: #aaaaaa;
-                    font-size: 5em;
-                    line-height: 0.8em;
-
-                    &:hover {
-                        color: white;
-                    }
-                }
-
-            }
-        }
-
-        &.about .content-img {
-            // background-image: url(../img/about-header.jpeg);
-            // background-repeat: no-repeat;
-            // background-position: 10px;
-            // display: block;
-            // margin-right: auto;
-            // margin-left: auto;
-            // height: 80px;
-
-        }
-
-
     }
 
 }
