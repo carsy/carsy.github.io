@@ -73,70 +73,58 @@ textarea {
   font-weight: 400;
   src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff"); }
 
-@font-face {
-  font-family: 'Mono Social Icons Font';
-  src: url("../fonts/MonoSocialIconsFont-1.10.eot");
-  src: url("../fonts/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../fonts/MonoSocialIconsFont-1.10.woff") format("woff"), url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
-  src: url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.symbol, a.symbol:before {
-  font-family: 'Mono Social Icons Font' !important;
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  -o-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased; }
-
-a.symbol:before {
-  content: attr(title);
-  margin-right: 0.3em;
-  font-size: 130%; }
-
+/* constants */
+/* "defaults" */
 html, body {
   height: 100%; }
 
 body {
-  background: white;
-  min-height: 100%;
-  font-size: 16px; }
+  background: #f8f8f8; }
 
 * {
   text-decoration: none;
-  color: white; }
+  color: #f8f8f8; }
 
 .nav {
-  position: relative;
   padding-top: 40px; }
-  .nav .nav-item {
-    padding: 20px 0px 20px 0px;
-    margin-bottom: 20px;
-    min-height: 200px;
-    box-shadow: 0px 1px 1px gray;
-    font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 4em;
-    text-align: center; }
-    .nav .nav-item.about {
-      background: #0072c6; }
-    .nav .nav-item.work {
-      background: #00bcf2; }
-    .nav .nav-item.contacts {
-      background: #ec863a; }
-    .nav .nav-item.misc {
-      background: #7fba00; }
+
+.nav-item {
+  position: relative;
+  padding: 20px 0px 20px 0px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 1px gray;
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 2.5em;
+  letter-spacing: 10px;
+  line-height: 200px;
+  text-align: center;
+  cursor: pointer;
+  cursor: hand;
+  -webkit-transition: bottom .25s;
+  transition: bottom .25s; }
+  .nav-item:hover {
+    bottom: 240px;
+    z-index: -999;
+    -webkit-transition: bottom .25s;
+    transition: bottom .25s; }
+  .nav-item.about {
+    background: #0072c6; }
+  .nav-item.work {
+    background: #00bcf2; }
+  .nav-item.contacts {
+    background: #ec863a; }
+  .nav-item.misc {
+    background: #78ba00; }
 
 footer {
   margin-top: 35px; }
   footer .signature {
     color: #a0a0a0;
     font-family: 'Waiting for the Sunrise', cursive;
-    letter-spacing: 2px; }
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right; }
 
 /* ==========================================================================
    Media Queries
