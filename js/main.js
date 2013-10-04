@@ -6,8 +6,11 @@ $(document).ready(function(){
 
 		events: {
 			navItemHover: function() {
-				$('.nav-item').mouseover(function() {
-					$(this).slideUp();
+				$('.item-content').mouseover(function() {
+					console.log('mouseover')
+				});
+				$('.item-content').mouseout(function() {
+					console.log('mouseout')
 				});
 			},
 
@@ -17,6 +20,6 @@ $(document).ready(function(){
 		}
 	}
 
-	// nav.events.loadEvents();
+	nav.events.loadEvents();
 
 });

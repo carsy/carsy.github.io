@@ -75,49 +75,87 @@ textarea {
 
 /* constants */
 /* "defaults" */
+* {
+  text-decoration: none;
+  color: white; }
+
 html, body {
   height: 100%; }
 
 body {
-  background: #f8f8f8; }
+  background: white;
+  overflow: auto; }
 
-* {
-  text-decoration: none;
-  color: #f8f8f8; }
+.dummy-separator {
+  min-height: 20px;
+  background: transparent;
+  z-index: 10;
+  clear: both;
+  position: relative; }
+  .dummy-separator:nth-child(1) {
+    min-height: 60px; }
 
-.nav {
-  padding-top: 40px; }
+.content-preview {
+  background: #e0e0e0; }
+
+.about .content-title {
+  background: #0072c6; }
+
+.work .content-title {
+  background: #00bcf2; }
+
+.contacts .content-title {
+  background: #ec863a; }
+
+.misc .content-title {
+  background: #78ba00; }
 
 .nav-item {
   position: relative;
-  padding: 20px 0px 20px 0px;
-  margin-bottom: 20px;
-  box-shadow: 0px 1px 1px gray;
-  font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 2.5em;
-  letter-spacing: 10px;
-  line-height: 200px;
-  text-align: center;
-  cursor: pointer;
-  cursor: hand;
-  -webkit-transition: bottom .25s;
-  transition: bottom .25s; }
-  .nav-item:hover {
-    bottom: 240px;
-    z-index: -999;
-    -webkit-transition: bottom .25s;
-    transition: bottom .25s; }
-  .nav-item.about {
-    background: #0072c6; }
-  .nav-item.work {
-    background: #00bcf2; }
-  .nav-item.contacts {
-    background: #ec863a; }
-  .nav-item.misc {
-    background: #78ba00; }
+  box-shadow: 0px 1px 2px gray;
+  border-radius: 1px; }
+  .nav-item .item-content {
+    overflow: hidden;
+    cursor: pointer;
+    cursor: hand;
+    z-index: 10;
+    height: 240px;
+    border-radius: 1px; }
+    .nav-item .item-content .content-title {
+      position: relative;
+      padding: 20px 0px 20px 0px;
+      font-family: 'Sue Ellen Francisco', cursive;
+      font-size: 2.5em;
+      letter-spacing: 10px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 1px;
+      -webkit-transition: bottom .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out;
+      transition: bottom .3s ease-in-out; }
+    .nav-item .item-content .content-preview {
+      color: #808080;
+      padding: 20px 20px 20px 20px;
+      min-height: 200px;
+      position: relative;
+      border-radius: 1px;
+      -webkit-transition: bottom .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out;
+      transition: bottom .3s ease-in-out; }
+    .nav-item .item-content:hover .content-title {
+      bottom: 240px;
+      -webkit-transition: bottom .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out;
+      transition: bottom .3s ease-in-out; }
+    .nav-item .item-content:hover .content-preview {
+      bottom: 240px;
+      -webkit-transition: bottom .3s ease-in-out;
+      -moz-transition: bottom .3s ease-in-out;
+      transition: bottom .3s ease-in-out; }
 
 footer {
-  margin-top: 35px; }
+  position: relative;
+  background: transparent; }
   footer .signature {
     color: #a0a0a0;
     font-family: 'Waiting for the Sunrise', cursive;

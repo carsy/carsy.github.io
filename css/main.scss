@@ -55,46 +55,59 @@ textarea {
     padding: 0.2em 0;
 }
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
 /***** COLORS *****/
 
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Amatic SC Regular"), local("AmaticSC-Regular"), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
 
 @font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+    font-family: 'Anaheim';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Anaheim"), local("Anaheim-Regular"), url(http://themes.googleusercontent.com/static/fonts/anaheim/v1/9grF9iDBrnUvUAGLpfiBHQ.woff) format("woff");
 }
+
+
 @font-face {
-  font-family: 'Anaheim';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Anaheim'), local('Anaheim-Regular'), url(http://themes.googleusercontent.com/static/fonts/anaheim/v1/9grF9iDBrnUvUAGLpfiBHQ.woff) format('woff');
+    font-family: 'Sue Ellen Francisco';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Sue Ellen Francisco "), local("SueEllenFrancisco"), url(http://themes.googleusercontent.com/static/fonts/sueellenfrancisco/v4/TwHX4vSxMUnJUdEz1JIgrrtXaZAN_aGv07JTA91X2HI.woff) format("woff");
 }
+
+
 @font-face {
-  font-family: 'Sue Ellen Francisco';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Sue Ellen Francisco '), local('SueEllenFrancisco'), url(http://themes.googleusercontent.com/static/fonts/sueellenfrancisco/v4/TwHX4vSxMUnJUdEz1JIgrrtXaZAN_aGv07JTA91X2HI.woff) format('woff');
+    font-family: 'Waiting for the Sunrise';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff");
 }
-@font-face {
-  font-family: 'Waiting for the Sunrise';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Waiting for the Sunrise'), local('WaitingfortheSunrise'), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format('woff');
-}
+
 
 /* constants */
-$bg_color: #f8f8f8;
+$bg_color: white;
+
+$about_color: #0072c6;
+$work_color: #00bcf2;
+$contacts_color: #ec863a;
+$misc_color: #78ba00;
 
 $nav_item_height: 200px;
 
-
 /* "defaults" */
+* {
+    text-decoration: none;
+    color: $bg_color;
+}
 
 html, body {
     height: 100%;
@@ -102,68 +115,122 @@ html, body {
 
 body {
     background: $bg_color;
+    overflow: auto;
 }
 
-* {
-    text-decoration: none;
-    color: $bg_color;
+.dummy-separator {
+    min-height: 20px;
+    background: transparent;
+    z-index: 10;
+    clear: both;
+    position: relative;
+    &:nth-child(1) {
+        min-height: 60px;
+    }
 }
 
+.content-preview {
+    background: #e0e0e0;
+}
 
-.nav {
-    padding-top: 40px;
+.about {
+    .content-title {
+        background: $about_color;
+    }
+    .content-preview {
+        // background: darken($about_color, 5%);
+    }
+}
+
+.work {
+    .content-title {
+        background: $work_color;
+    }
+    .content-preview {
+        // background: darken($work_color, 5%);
+    }
+}
+
+.contacts {
+    .content-title {
+        background: $contacts_color;
+    }
+    .content-preview {
+        // background: darken($contacts_color, 5%);
+    }
+}
+
+.misc {
+    .content-title {
+        background: $misc_color;
+    }
+    .content-preview {
+        // background: darken($misc_color, 5%);
+    }
 }
 
 .nav-item {
     position: relative;
-    padding: 20px 0px 20px 0px;
-    margin-bottom: 20px;
+    box-shadow: 0px 1px 2px gray;
+    border-radius: 1px;
 
-    box-shadow: 0px 1px 1px gray;
+    .item-content {
+        overflow: hidden;
+        cursor: pointer;
+        cursor: hand;
+        z-index: 10;
+        height: 240px;
+        border-radius: 1px;
 
-    font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 2.5em;
-    
-    letter-spacing: 10px;
-    line-height: $nav_item_height;
-    text-align: center;
+        .content-title {
+            position: relative;
+            padding: 20px 0px 20px 0px;
+            font-family: 'Sue Ellen Francisco', cursive;
+            font-size: 2.5em;
+            letter-spacing: 10px;
+            line-height: $nav_item_height;
+            text-align: center;
+            border-radius: 1px;
 
-    cursor: pointer;
-    cursor: hand;
+            -webkit-transition: bottom .3s ease-in-out;
+            -moz-transition: bottom .3s ease-in-out;
+            transition: bottom .3s ease-in-out;
+        }
+        
+        .content-preview {
+            color: #808080;
+            padding: 20px 20px 20px 20px;
+            min-height: 200px;
+            position: relative;
+            border-radius: 1px;
 
-    -webkit-transition: bottom .25s;
-    transition: bottom .25s;
+            -webkit-transition: bottom .3s ease-in-out;
+            -moz-transition: bottom .3s ease-in-out;
+            transition: bottom .3s ease-in-out;
+        }
 
-    &:hover {
-        bottom: 240px;
-        z-index: -999;
+        &:hover {
+            .content-title {
+                bottom: 240px;
 
-        -webkit-transition: bottom .25s;
-        transition: bottom .25s;
+                -webkit-transition: bottom .3s ease-in-out;
+                -moz-transition: bottom .3s ease-in-out;
+                transition: bottom .3s ease-in-out;
+            }
+            .content-preview {
+                bottom: 240px;
+
+                -webkit-transition: bottom .3s ease-in-out;
+                -moz-transition: bottom .3s ease-in-out;
+                transition: bottom .3s ease-in-out;
+            }
+        }
     }
-
-    &.about {
-        background: #0072c6;
-    }
-
-    &.work {
-        background: #00bcf2;
-    }
-
-    &.contacts {
-        background: #ec863a;
-    }
-
-    &.misc {
-        background: #78ba00;
-    }
-    
 }
 
-
 footer {
-    margin-top: 35px;
-
+    position: relative;
+    background: transparent;
     .signature {
         color: #a0a0a0;
         font-family: 'Waiting for the Sunrise', cursive;
@@ -171,25 +238,16 @@ footer {
         font-weight: bold;
         font-size: 1.5em;
         text-align: right;
-        // letter-spacing: 4px;
     }
 }
-
-
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-}
+@media only screen and (min-width: 35em) {}
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {}
 
 /* ==========================================================================
    Helper classes
@@ -260,53 +318,45 @@ footer {
 @media print {
     * {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        color: #000 !important;
+        /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links for images, or javascript/internal links
      */
-
     .ir a:after,
     a[href^="javascript:"]:after,
     a[href^="#"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     thead {
-        display: table-header-group; /* h5bp.com/t */
+        display: table-header-group;
+        /* h5bp.com/t */
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     @page {
         margin: 0.5cm;
     }
@@ -317,7 +367,6 @@ footer {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
