@@ -98,18 +98,6 @@ body {
 .content-preview {
   background: #e0e0e0; }
 
-.about .content-title {
-  background: #0072c6; }
-
-.work .content-title {
-  background: #00bcf2; }
-
-.contacts .content-title {
-  background: #ec863a; }
-
-.misc .content-title {
-  background: #78ba00; }
-
 .nav-item {
   position: relative;
   box-shadow: 0px 1px 2px gray;
@@ -123,25 +111,27 @@ body {
     border-radius: 1px; }
     .nav-item .item-content .content-title {
       position: relative;
-      padding: 20px 0px 20px 0px;
       font-family: 'Sue Ellen Francisco', cursive;
-      font-size: 2.5em;
+      font-size: 5em;
       letter-spacing: 10px;
-      line-height: 200px;
+      line-height: 240px;
       text-align: center;
       border-radius: 1px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
     .nav-item .item-content .content-preview {
-      color: #808080;
-      padding: 20px 20px 20px 20px;
-      min-height: 200px;
+      min-height: 240px;
       position: relative;
       border-radius: 1px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
+      .nav-item .item-content .content-preview * {
+        color: white; }
+      .nav-item .item-content .content-preview .preview-text {
+        padding: 20px 15px 20px 15px;
+        font-family: 'Anaheim', cursive; }
     .nav-item .item-content:hover .content-title {
       bottom: 240px;
       -webkit-transition: bottom .3s ease-in-out;
@@ -152,6 +142,46 @@ body {
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
+
+.about .content-title {
+  background: #008fc8; }
+.about .content-preview {
+  background: #00b3fb; }
+  .about .content-preview .preview-img {
+    display: inline;
+    float: left; }
+  .about .content-preview .preview-text {
+    display: inline;
+    float: left;
+    max-width: 230px; }
+    .about .content-preview .preview-text .text-title {
+      font-family: 'Sue Ellen Francisco', cursive;
+      font-size: 2em; }
+    .about .content-preview .preview-text .text {
+      display: block; }
+      .about .content-preview .preview-text .text .text-strong {
+        display: block;
+        padding: 0px 10px 0px 10px; }
+  .about .content-preview img {
+    width: auto;
+    height: 240px; }
+  .about .content-preview .text-name {
+    font-size: 2em; }
+
+.work .content-title {
+  background: #e84040; }
+.work .content-preview {
+  background: #eb5757; }
+
+.contacts .content-title {
+  background: #ef863a; }
+.contacts .content-preview {
+  background: #f19452; }
+
+.misc .content-title {
+  background: #40aa40; }
+.misc .content-preview {
+  background: #49ba49; }
 
 footer {
   position: relative;

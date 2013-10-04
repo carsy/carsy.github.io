@@ -96,12 +96,12 @@ textarea {
 /* constants */
 $bg_color: white;
 
-$about_color: #0072c6;
-$work_color: #00bcf2;
-$contacts_color: #ec863a;
-$misc_color: #78ba00;
+$about_color: #008fc8;
+$work_color: #e84040;
+$contacts_color: #ef863a;
+$misc_color: #40aa40;
 
-$nav_item_height: 200px;
+$nav_item_height: 240px;
 
 /* "defaults" */
 * {
@@ -118,12 +118,19 @@ body {
     overflow: auto;
 }
 
+@mixin nav_item_hover() {
+    -webkit-transition: bottom .3s ease-in-out;
+    -moz-transition: bottom .3s ease-in-out;
+    transition: bottom .3s ease-in-out;
+}
+
 .dummy-separator {
     min-height: 20px;
     background: transparent;
     z-index: 10;
     clear: both;
     position: relative;
+
     &:nth-child(1) {
         min-height: 60px;
     }
@@ -133,41 +140,6 @@ body {
     background: #e0e0e0;
 }
 
-.about {
-    .content-title {
-        background: $about_color;
-    }
-    .content-preview {
-        // background: darken($about_color, 5%);
-    }
-}
-
-.work {
-    .content-title {
-        background: $work_color;
-    }
-    .content-preview {
-        // background: darken($work_color, 5%);
-    }
-}
-
-.contacts {
-    .content-title {
-        background: $contacts_color;
-    }
-    .content-preview {
-        // background: darken($contacts_color, 5%);
-    }
-}
-
-.misc {
-    .content-title {
-        background: $misc_color;
-    }
-    .content-preview {
-        // background: darken($misc_color, 5%);
-    }
-}
 
 .nav-item {
     position: relative;
@@ -179,52 +151,140 @@ body {
         cursor: pointer;
         cursor: hand;
         z-index: 10;
-        height: 240px;
+        height: $nav_item_height;
         border-radius: 1px;
 
         .content-title {
             position: relative;
-            padding: 20px 0px 20px 0px;
             font-family: 'Sue Ellen Francisco', cursive;
-            font-size: 2.5em;
+            font-size: 5em;
             letter-spacing: 10px;
             line-height: $nav_item_height;
             text-align: center;
             border-radius: 1px;
 
-            -webkit-transition: bottom .3s ease-in-out;
-            -moz-transition: bottom .3s ease-in-out;
-            transition: bottom .3s ease-in-out;
+            @include nav_item_hover();
         }
-        
+
         .content-preview {
-            color: #808080;
-            padding: 20px 20px 20px 20px;
-            min-height: 200px;
+            * {
+                color: white;
+            }
+            min-height: $nav_item_height;
             position: relative;
             border-radius: 1px;
 
-            -webkit-transition: bottom .3s ease-in-out;
-            -moz-transition: bottom .3s ease-in-out;
-            transition: bottom .3s ease-in-out;
+            .preview-text {
+                padding: 20px 15px 20px 15px;
+                font-family: 'Anaheim', cursive;
+            }
+
+            @include nav_item_hover();
         }
 
         &:hover {
             .content-title {
                 bottom: 240px;
 
-                -webkit-transition: bottom .3s ease-in-out;
-                -moz-transition: bottom .3s ease-in-out;
-                transition: bottom .3s ease-in-out;
+                @include nav_item_hover();
             }
             .content-preview {
                 bottom: 240px;
 
-                -webkit-transition: bottom .3s ease-in-out;
-                -moz-transition: bottom .3s ease-in-out;
-                transition: bottom .3s ease-in-out;
+                @include nav_item_hover();
             }
         }
+    }
+}
+
+
+.about {
+    .content-title {
+        background: $about_color;
+    }
+    .content-preview {
+        
+        .preview-img {
+            display: inline;
+            float: left;
+        }
+
+        .preview-text {
+            display: inline;
+            float: left;
+            max-width: 230px;
+
+            .text-title {
+                font-family: 'Sue Ellen Francisco', cursive;
+                font-size: 2em;
+            }
+            .text {
+                display: block;
+
+                .text-strong {
+                    display: block;
+                    padding: 0px 10px 0px 10px;
+                }
+            }
+        }
+
+        img {
+            width: auto;
+            height: 240px;
+        }
+
+        .text-name {
+            font-size: 2em;
+        }
+
+        background: lighten($about_color, 10%);
+    }
+
+    &:hover {
+        // -webkit-transform: rotate(-1deg);
+        // transform: rotate(-1deg);
+    }
+}
+
+.work {
+    .content-title {
+        background: $work_color
+    }
+    .content-preview {
+        background: lighten($work_color, 5%);
+    }
+
+    &:hover {
+        // -webkit-transform: rotate(1deg);
+        // transform: rotate(1deg);
+    }
+}
+
+.contacts {
+    .content-title {
+        background: $contacts_color;
+    }
+    .content-preview {
+        background: lighten($contacts_color, 5%);
+    }
+
+    &:hover {
+        // -webkit-transform: rotate(-1deg);
+        // transform: rotate(-1deg);
+    }
+}
+
+.misc {
+    .content-title {
+        background: $misc_color;
+    }
+    .content-preview {
+        background: lighten($misc_color, 5%);
+    }
+
+    &:hover {
+        // -webkit-transform: rotate(1deg);
+        // transform: rotate(1deg);
     }
 }
 
