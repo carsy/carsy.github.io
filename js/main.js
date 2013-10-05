@@ -21,8 +21,8 @@ $(document).ready(function(){
 			},
 
 			expandOnHover: function() {
-				
-			}
+
+			},
 
 			load: function() {
 				this.expanderClick();
