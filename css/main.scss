@@ -246,7 +246,7 @@ body {
             position: relative;
 
             .preview-text {
-                padding: 20px 15px 20px 20px;
+                padding: 20px 0px 20px 0px;
                 font-family: 'Anaheim', cursive;
             }
 
@@ -269,7 +269,7 @@ body {
 }
 
 
-.about {
+#about {
     .content-title {
         background: $about_color;
     }
@@ -278,6 +278,10 @@ body {
         
         .preview-img {
             float: left;
+
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+            opacity: 0.9;
         }
 
         .preview-text {
@@ -288,13 +292,26 @@ body {
             .text-title {
                 font-family: 'Sue Ellen Francisco', cursive;
                 font-size: 2em;
+                display: inline-block;
+                padding-top: 10px;
+                padding-left: 20px;
+                width: 260px;
+
+                background: $about_color;
             }
             .text {
-                display: block;
+                display: inline-block;
+                padding-left: 20px;
+                font-size: 1em !important;
 
                 .text-strong {
                     display: block;
-                    padding: 0px 10px 0px 10px;
+                    padding-left: 2px;
+                    font-size: 1.1em !important;
+
+                    &:hover {
+                        background: $about_color;
+                    }
                 }
             }
         }
@@ -316,7 +333,7 @@ body {
     }
 }
 
-.work {
+#work {
     .content-title {
         background: $work_color
     }
@@ -332,13 +349,45 @@ body {
     }
 }
 
-.contacts {
+#contacts {
     .content-title {
         background: $contacts_color;
     }
 
     .content-preview {
         background: lighten($contacts_color, 5%);
+
+        .preview-text {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .container {
+            display: inline-block;
+
+            padding-left: 40px;
+
+            &:hover {
+                background: $contacts_color;
+            }
+        }
+
+        .col-left {
+            text-align: right;
+
+            font-family: 'Amatic SC', recursive;
+            font-size: 2em;
+            letter-spacing: 3px;
+        }
+
+        .col-right {
+            text-align: left;
+
+            span {
+                line-height: 2.75em;
+                padding-left: 20px;
+            }
+        }
     }
 
     &:hover {
@@ -347,7 +396,7 @@ body {
     }
 }
 
-.misc {
+#misc {
     .content-title {
         background: $misc_color;
     }

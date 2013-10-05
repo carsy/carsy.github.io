@@ -178,7 +178,7 @@ body {
       .nav-item .item-content .content-preview * {
         color: white; }
       .nav-item .item-content .content-preview .preview-text {
-        padding: 20px 15px 20px 20px;
+        padding: 20px 0px 20px 0px;
         font-family: 'Anaheim', cursive; }
     .nav-item .item-content:hover .content-title {
       bottom: 240px;
@@ -191,43 +191,74 @@ body {
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
 
-.about .content-title {
+#about .content-title {
   background: #008fc8; }
-.about .content-preview {
+#about .content-preview {
   background: #00b3fb; }
-  .about .content-preview .preview-img {
-    float: left; }
-  .about .content-preview .preview-text {
+  #about .content-preview .preview-img {
+    float: left;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9; }
+  #about .content-preview .preview-text {
     display: inline;
     float: left;
     max-width: 230px; }
-    .about .content-preview .preview-text .text-title {
+    #about .content-preview .preview-text .text-title {
       font-family: 'Sue Ellen Francisco', cursive;
-      font-size: 2em; }
-    .about .content-preview .preview-text .text {
-      display: block; }
-      .about .content-preview .preview-text .text .text-strong {
+      font-size: 2em;
+      display: inline-block;
+      padding-top: 10px;
+      padding-left: 20px;
+      width: 260px;
+      background: #008fc8; }
+    #about .content-preview .preview-text .text {
+      display: inline-block;
+      padding-left: 20px;
+      font-size: 1em !important; }
+      #about .content-preview .preview-text .text .text-strong {
         display: block;
-        padding: 0px 10px 0px 10px; }
-  .about .content-preview img {
+        padding-left: 2px;
+        font-size: 1.1em !important; }
+        #about .content-preview .preview-text .text .text-strong:hover {
+          background: #008fc8; }
+  #about .content-preview img {
     width: auto;
     height: 240px; }
-  .about .content-preview .text-name {
+  #about .content-preview .text-name {
     font-size: 2em; }
 
-.work .content-title {
+#work .content-title {
   background: #d84040; }
-.work .content-preview {
+#work .content-preview {
   background: #dc5555; }
 
-.contacts .content-title {
+#contacts .content-title {
   background: #ef863a; }
-.contacts .content-preview {
+#contacts .content-preview {
   background: #f19452; }
+  #contacts .content-preview .preview-text {
+    padding-left: 0px;
+    padding-right: 0px; }
+  #contacts .content-preview .container {
+    display: inline-block;
+    padding-left: 40px; }
+    #contacts .content-preview .container:hover {
+      background: #ef863a; }
+  #contacts .content-preview .col-left {
+    text-align: right;
+    font-family: 'Amatic SC', recursive;
+    font-size: 2em;
+    letter-spacing: 3px; }
+  #contacts .content-preview .col-right {
+    text-align: left; }
+    #contacts .content-preview .col-right span {
+      line-height: 2.75em;
+      padding-left: 20px; }
 
-.misc .content-title {
+#misc .content-title {
   background: #40aa40; }
-.misc .content-preview {
+#misc .content-preview {
   background: #49ba49; }
 
 footer {
