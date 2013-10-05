@@ -11,17 +11,13 @@ $(document).ready(function(){
 
 					expander.toggleClass('expanded');
 
-					$('.content-title, .content-preview').toggleClass('expanded-card');
+					$('.content-preview').toggleClass('expanded-card');
 
 					if (expander.hasClass('expanded'))
 						expander.html('-');
 					else
 						expander.html('+');
 				});
-			},
-
-			expandOnHover: function() {
-
 			},
 
 			load: function() {

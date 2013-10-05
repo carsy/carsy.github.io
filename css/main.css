@@ -123,11 +123,9 @@ body {
   text-align: center; }
 
 .expander {
-  display: inline-block;
   position: absolute;
-  top: 0px;
   right: 480px;
-  margin-right: 2px;
+  margin-right: 4px;
   width: 0.9em;
   cursor: pointer;
   cursor: hand;
@@ -135,9 +133,6 @@ body {
   font-size: 1.8em;
   font-family: 'Waiting for the Sunrise', cursive; }
   .expander div {
-    margin-right: auto;
-    margin-left: auto;
-    vertical-align: middle;
     line-height: 0.9em;
     text-align: center;
     color: #49cbff; }
@@ -146,13 +141,40 @@ body {
     .expander:hover div {
       color: #e2f7ff; }
 
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 480px;
+  width: 44px;
+  height: 44px;
+  margin-left: 4px; }
+  .menu .menu-item {
+    display: block;
+    float: left;
+    margin: 0px 4px 4px 0px;
+    cursor: pointer;
+    cursor: hand;
+    width: 16px;
+    height: 16px; }
+    .menu .menu-item.about {
+      background: #c8efff; }
+      .menu .menu-item.about:hover {
+        background: #49cbff; }
+    .menu .menu-item.work {
+      background: #f2bfbf; }
+      .menu .menu-item.work:hover {
+        background: #e99595; }
+    .menu .menu-item.contacts {
+      background: #f7c098; }
+      .menu .menu-item.contacts:hover {
+        background: #f3a369; }
+    .menu .menu-item.misc {
+      background: #81cf81; }
+      .menu .menu-item.misc:hover {
+        background: #49ba49; }
+
 .expanded-card {
-  bottom: 240px;
-  -webkit-transition: bottom .3s ease-in-out;
-  -moz-transition: bottom .3s ease-in-out;
-  -ms-transition: bottom .3s ease-in-out;
-  -o-transition: bottom .3s ease-in-out;
-  transition: bottom .3s ease-in-out; }
+  bottom: 240px; }
 
 .nav-item {
   position: relative;
@@ -187,19 +209,9 @@ body {
         padding: 20px 0px 20px 0px;
         font-family: 'Anaheim', cursive; }
     .nav-item .item-content:hover .content-title {
-      bottom: 240px;
-      -webkit-transition: bottom .3s ease-in-out;
-      -moz-transition: bottom .3s ease-in-out;
-      -ms-transition: bottom .3s ease-in-out;
-      -o-transition: bottom .3s ease-in-out;
-      transition: bottom .3s ease-in-out; }
+      bottom: 240px; }
     .nav-item .item-content:hover .content-preview {
-      bottom: 240px;
-      -webkit-transition: bottom .3s ease-in-out;
-      -moz-transition: bottom .3s ease-in-out;
-      -ms-transition: bottom .3s ease-in-out;
-      -o-transition: bottom .3s ease-in-out;
-      transition: bottom .3s ease-in-out; }
+      bottom: 240px; }
 
 #about .content-title {
   background: #008fc8; }
