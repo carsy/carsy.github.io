@@ -227,9 +227,10 @@ body {
       padding-left: 20px;
       font-size: 1em !important; }
       #about .content-preview .preview-text .text .text-strong {
-        display: block;
+        display: inline-block;
         padding-left: 2px;
-        font-size: 1.1em !important; }
+        padding-right: 2px;
+        font-size: 1em !important; }
         #about .content-preview .preview-text .text .text-strong:hover {
           background: #008fc8; }
   #about .content-preview img {

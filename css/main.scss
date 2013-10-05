@@ -307,9 +307,10 @@ body {
                 font-size: 1em !important;
 
                 .text-strong {
-                    display: block;
+                    display: inline-block;
                     padding-left: 2px;
-                    font-size: 1.1em !important;
+                    padding-right: 2px;
+                    font-size: 1em !important;
 
                     &:hover {
                         background: $about_color;
