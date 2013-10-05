@@ -150,6 +150,8 @@ body {
   bottom: 240px;
   -webkit-transition: bottom .3s ease-in-out;
   -moz-transition: bottom .3s ease-in-out;
+  -ms-transition: bottom .3s ease-in-out;
+  -o-transition: bottom .3s ease-in-out;
   transition: bottom .3s ease-in-out; }
 
 .nav-item {
@@ -168,12 +170,16 @@ body {
       text-align: center;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
+      -ms-transition: bottom .3s ease-in-out;
+      -o-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
     .nav-item .item-content .content-preview {
       min-height: 240px;
       position: relative;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
+      -ms-transition: bottom .3s ease-in-out;
+      -o-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
       .nav-item .item-content .content-preview * {
         color: white; }
@@ -184,11 +190,15 @@ body {
       bottom: 240px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
+      -ms-transition: bottom .3s ease-in-out;
+      -o-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
     .nav-item .item-content:hover .content-preview {
       bottom: 240px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
+      -ms-transition: bottom .3s ease-in-out;
+      -o-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
 
 #about .content-title {
@@ -197,9 +207,9 @@ body {
   background: #00b3fb; }
   #about .content-preview .preview-img {
     float: left;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9; }
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+    opacity: 0.85; }
   #about .content-preview .preview-text {
     display: inline;
     float: left;

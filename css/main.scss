@@ -153,6 +153,8 @@ body {
 @mixin nav_item_hover() {
     -webkit-transition: bottom .3s ease-in-out;
     -moz-transition: bottom .3s ease-in-out;
+    -ms-transition: bottom .3s ease-in-out;
+    -o-transition: bottom .3s ease-in-out;
     transition: bottom .3s ease-in-out;
 }
 
@@ -279,9 +281,9 @@ body {
         .preview-img {
             float: left;
 
-            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-            opacity: 0.9;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+            opacity: 0.85;
         }
 
         .preview-text {
