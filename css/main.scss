@@ -59,7 +59,37 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/***** COLORS *****/
+@font-face {
+    font-family: 'Mono Social Icons Font';
+    src: url('../fonts/../fonts/MonoSocialIconsFont-1.10.eot');
+    src: url('../fonts/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MonoSocialIconsFont-1.10.woff') format('woff'),
+         url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+         url('../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+    src: url('../fonts/MonoSocialIconsFont-1.10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+a.symbol:before {
+    content: attr(title);
+    margin-right: 0.3em;
+    font-size: 130%;
+}
 
 @font-face {
     font-family: 'Amatic SC';
@@ -93,11 +123,13 @@ textarea {
 }
 
 
-/* constants */
+
+
+/***** COLORS *****/
 $bg_color: white;
 
 $about_color: #008fc8;
-$work_color: #e84040;
+$work_color: #d84040;
 $contacts_color: #ef863a;
 $misc_color: #40aa40;
 
@@ -124,58 +156,96 @@ body {
     transition: bottom .3s ease-in-out;
 }
 
-.dummy-separator {
-    min-height: 20px;
-    background: transparent;
-    z-index: 10;
-    clear: both;
-    position: relative;
+.dummy-separator-middle {
+    // min-height: 5px;
+    // width: 100%;
+    // float: left;
+}
 
-    &:nth-child(1) {
-        min-height: 60px;
-    }
+.dummy-separator-top, .dummy-separator-bottom {
+    min-height: 60px;
 }
 
 .content-preview {
     background: #e0e0e0;
 }
 
+.symbol {
+    font-size: 5em;
+    line-height: .7em;
+}
+
+.expander {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 480px;
+    margin-right: 2px;
+    width: 0.9em;
+
+    cursor: pointer;
+    cursor: hand;
+
+    background: lighten($about_color, 50%);
+
+    font-size: 1.8em;
+    font-family: 'Waiting for the Sunrise', cursive;
+
+    div {
+        margin-right: auto;
+        margin-left: auto;
+        vertical-align: middle;
+        line-height: 0.9em;
+        text-align: center;
+
+        color: lighten($about_color, 25%);
+    }
+
+    &:hover {
+        div {
+            color: lighten($about_color, 55%);
+        }
+        background: lighten($about_color, 25%);
+    }
+}
+
+.expanded-card {
+    bottom: 240px;
+
+    @include nav_item_hover();
+}
 
 .nav-item {
     position: relative;
-    box-shadow: 0px 1px 2px gray;
-    border-radius: 1px;
+    // box-shadow: 0px 1px 2px gray;
+
+    width: 480px !important; // FIXED
 
     .item-content {
         overflow: hidden;
-        cursor: pointer;
-        cursor: hand;
         z-index: 10;
         height: $nav_item_height;
-        border-radius: 1px;
 
         .content-title {
             position: relative;
-            font-family: 'Sue Ellen Francisco', cursive;
+            font-family: 'Amatic SC', cursive;
             font-size: 5em;
             letter-spacing: 10px;
             line-height: $nav_item_height;
             text-align: center;
-            border-radius: 1px;
 
             @include nav_item_hover();
         }
 
         .content-preview {
             * {
-                color: white;
+                color: $bg_color;
             }
             min-height: $nav_item_height;
             position: relative;
-            border-radius: 1px;
 
             .preview-text {
-                padding: 20px 15px 20px 15px;
+                padding: 20px 15px 20px 20px;
                 font-family: 'Anaheim', cursive;
             }
 
@@ -203,9 +273,9 @@ body {
         background: $about_color;
     }
     .content-preview {
+        background: lighten($about_color, 10%);
         
         .preview-img {
-            display: inline;
             float: left;
         }
 
@@ -237,7 +307,6 @@ body {
             font-size: 2em;
         }
 
-        background: lighten($about_color, 10%);
     }
 
     &:hover {
@@ -252,6 +321,8 @@ body {
     }
     .content-preview {
         background: lighten($work_color, 5%);
+
+
     }
 
     &:hover {
@@ -264,6 +335,7 @@ body {
     .content-title {
         background: $contacts_color;
     }
+
     .content-preview {
         background: lighten($contacts_color, 5%);
     }
@@ -289,7 +361,6 @@ body {
 }
 
 footer {
-    position: relative;
     background: transparent;
     .signature {
         color: #a0a0a0;

@@ -4,22 +4,28 @@ $(document).ready(function(){
 		init: function(config) {
 		},
 
-		events: {
-			navItemHover: function() {
-				$('.item-content').mouseover(function() {
-					console.log('mouseover')
-				});
-				$('.item-content').mouseout(function() {
-					console.log('mouseout')
+		eventHandlers: {
+			expanderClick: function() {
+				$('.expander div').click(function() {
+					var expander = $(this);
+
+					expander.toggleClass('expanded');
+
+					$('.content-title, .content-preview').toggleClass('expanded-card');
+
+					if (expander.hasClass('expanded'))
+						expander.html('-');
+					else
+						expander.html('+');
 				});
 			},
 
-			loadEvents: function() {
-				this.navItemHover();
+			load: function() {
+				this.expanderClick();
 			}
 		}
 	}
 
-	nav.events.loadEvents();
+	nav.eventHandlers.load();
 
 });

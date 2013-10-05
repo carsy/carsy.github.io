@@ -48,7 +48,32 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/***** COLORS *****/
+@font-face {
+  font-family: 'Mono Social Icons Font';
+  src: url("../fonts/../fonts/MonoSocialIconsFont-1.10.eot");
+  src: url("../fonts/MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("../fonts/MonoSocialIconsFont-1.10.woff") format("woff"), url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype"), url("../fonts/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont") format("svg");
+  src: url("../fonts/MonoSocialIconsFont-1.10.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.symbol, a.symbol:before {
+  font-family: 'Mono Social Icons Font';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+a.symbol:before {
+  content: attr(title);
+  margin-right: 0.3em;
+  font-size: 130%; }
+
 @font-face {
   font-family: 'Amatic SC';
   font-style: normal;
@@ -73,7 +98,7 @@ textarea {
   font-weight: 400;
   src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff"); }
 
-/* constants */
+/***** COLORS *****/
 /* "defaults" */
 * {
   text-decoration: none;
@@ -86,51 +111,73 @@ body {
   background: white;
   overflow: auto; }
 
-.dummy-separator {
-  min-height: 20px;
-  background: transparent;
-  z-index: 10;
-  clear: both;
-  position: relative; }
-  .dummy-separator:nth-child(1) {
-    min-height: 60px; }
+.dummy-separator-top, .dummy-separator-bottom {
+  min-height: 60px; }
 
 .content-preview {
   background: #e0e0e0; }
 
+.symbol {
+  font-size: 5em;
+  line-height: .7em; }
+
+.expander {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 480px;
+  margin-right: 2px;
+  width: 0.9em;
+  cursor: pointer;
+  cursor: hand;
+  background: #c8efff;
+  font-size: 1.8em;
+  font-family: 'Waiting for the Sunrise', cursive; }
+  .expander div {
+    margin-right: auto;
+    margin-left: auto;
+    vertical-align: middle;
+    line-height: 0.9em;
+    text-align: center;
+    color: #49cbff; }
+  .expander:hover {
+    background: #49cbff; }
+    .expander:hover div {
+      color: #e2f7ff; }
+
+.expanded-card {
+  bottom: 240px;
+  -webkit-transition: bottom .3s ease-in-out;
+  -moz-transition: bottom .3s ease-in-out;
+  transition: bottom .3s ease-in-out; }
+
 .nav-item {
   position: relative;
-  box-shadow: 0px 1px 2px gray;
-  border-radius: 1px; }
+  width: 480px !important; }
   .nav-item .item-content {
     overflow: hidden;
-    cursor: pointer;
-    cursor: hand;
     z-index: 10;
-    height: 240px;
-    border-radius: 1px; }
+    height: 240px; }
     .nav-item .item-content .content-title {
       position: relative;
-      font-family: 'Sue Ellen Francisco', cursive;
+      font-family: 'Amatic SC', cursive;
       font-size: 5em;
       letter-spacing: 10px;
       line-height: 240px;
       text-align: center;
-      border-radius: 1px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
     .nav-item .item-content .content-preview {
       min-height: 240px;
       position: relative;
-      border-radius: 1px;
       -webkit-transition: bottom .3s ease-in-out;
       -moz-transition: bottom .3s ease-in-out;
       transition: bottom .3s ease-in-out; }
       .nav-item .item-content .content-preview * {
         color: white; }
       .nav-item .item-content .content-preview .preview-text {
-        padding: 20px 15px 20px 15px;
+        padding: 20px 15px 20px 20px;
         font-family: 'Anaheim', cursive; }
     .nav-item .item-content:hover .content-title {
       bottom: 240px;
@@ -148,7 +195,6 @@ body {
 .about .content-preview {
   background: #00b3fb; }
   .about .content-preview .preview-img {
-    display: inline;
     float: left; }
   .about .content-preview .preview-text {
     display: inline;
@@ -169,9 +215,9 @@ body {
     font-size: 2em; }
 
 .work .content-title {
-  background: #e84040; }
+  background: #d84040; }
 .work .content-preview {
-  background: #eb5757; }
+  background: #dc5555; }
 
 .contacts .content-title {
   background: #ef863a; }
@@ -184,7 +230,6 @@ body {
   background: #49ba49; }
 
 footer {
-  position: relative;
   background: transparent; }
   footer .signature {
     color: #a0a0a0;
