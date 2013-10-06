@@ -20,8 +20,18 @@ $(document).ready(function(){
 				});
 			},
 
+			menuHover: function() {
+				$('.menu-item').hover(function() {
+					var nav_item = $('#' + $(this).attr('class').split(' ')[1]);
+
+					$('.content-title', nav_item).toggleClass('expanded-card');
+					$('.content-preview', nav_item).toggleClass('expanded-card');
+				});
+			},
+
 			load: function() {
 				this.expanderClick();
+				this.menuHover();
 			}
 		}
 	}
