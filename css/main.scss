@@ -150,6 +150,10 @@ body {
     overflow: auto;
 }
 
+* {
+    outline: none;
+}
+
 .dummy-separator-middle {
     // min-height: 5px;
     // width: 100%;
@@ -168,6 +172,7 @@ body {
     font-size: 5em;
     line-height: .7em;
     text-align: center;
+    display: inline-block;
 }
 
 .expander {
@@ -448,6 +453,20 @@ body {
     }
     .content-preview {
         background: lighten($misc_color, 5%);
+    }
+
+    .preview-text {
+        line-height: 280px;
+        text-align: center;
+
+        padding: 0;
+    }
+
+    .symbol:hover {
+        background: $misc_color;
+
+        cursor: pointer;
+        cursor: hand;
     }
 
     &:hover {

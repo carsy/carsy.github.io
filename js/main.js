@@ -22,6 +22,9 @@ $(document).ready(function(){
 
 			menuHover: function() {
 				$('.menu-item').hover(function() {
+					if( $('.expander div').hasClass('expanded') )
+						return;
+
 					var nav_item = $('#' + $(this).attr('class').split(' ')[1]);
 
 					$('.content-title', nav_item).toggleClass('expanded-card');
