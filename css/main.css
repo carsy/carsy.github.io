@@ -259,6 +259,42 @@ body {
   background: #d84040; }
 #work .content-preview {
   background: #dc5555; }
+#work .preview-text {
+  padding-top: 20px;
+  padding-bottom: 0px; }
+#work .project-1, #work .project-2 {
+  display: inline;
+  float: left;
+  text-align: center;
+  font-size: 1.5em;
+  height: 220px;
+  width: 240px;
+  background: #e16a6a; }
+  #work .project-1 img, #work .project-2 img {
+    display: block;
+    width: auto;
+    height: 120px;
+    margin-left: 10px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity: 0.60; }
+  #work .project-1 .project-title, #work .project-2 .project-title {
+    margin-bottom: 20px;
+    padding: 10px 0px 11px 0px;
+    display: block;
+    background: #d84040; }
+  #work .project-1 span, #work .project-2 span {
+    display: inline-block; }
+  #work .project-1:hover, #work .project-2:hover {
+    background: #e58080;
+    cursor: pointer;
+    cursor: hand; }
+    #work .project-1:hover .project-title, #work .project-2:hover .project-title {
+      background: #dc5555; }
+    #work .project-1:hover img, #work .project-2:hover img {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1; }
 
 #contacts .content-title {
   background: #ef863a; }
@@ -288,7 +324,7 @@ body {
 #misc .content-preview {
   background: #49ba49; }
 #misc .preview-text {
-  line-height: 280px;
+  line-height: 260px;
   text-align: center;
   padding: 0; }
 #misc .symbol:hover {

@@ -386,11 +386,67 @@ body {
 
 #work {
     .content-title {
-        background: $work_color
+        background: $work_color;
     }
     .content-preview {
         background: lighten($work_color, 5%);
+    }
 
+    .preview-text {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .project-1, .project-2 {
+        display: inline;
+        float: left;
+        text-align: center;
+        font-size: 1.5em;
+        height: 220px;
+        width: 240px;
+        background: lighten($work_color, 10%);
+
+        img {
+            display: block;
+            width: auto;
+            height: 120px;
+            margin-left: 10px;
+
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+            opacity: 0.60;
+        }
+
+        .project-title {
+            margin-bottom: 20px;
+            padding: 10px 0px 11px 0px;
+            display: block;
+            background: $work_color;
+        }
+
+        .project-title {
+            // background: $work_color;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        &:hover {
+            background: lighten($work_color, 15%);
+            cursor: pointer;
+            cursor: hand;
+
+            .project-title {
+                background: lighten($work_color, 5%);
+            }
+
+            img {
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+                opacity: 1;
+            }
+        }
 
     }
 
@@ -456,7 +512,7 @@ body {
     }
 
     .preview-text {
-        line-height: 280px;
+        line-height: 260px;
         text-align: center;
 
         padding: 0;
