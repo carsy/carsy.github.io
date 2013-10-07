@@ -286,11 +286,11 @@ body {
   #work .project-1 span, #work .project-2 span {
     display: inline-block; }
   #work .project-1:hover, #work .project-2:hover {
-    background: #e58080;
+    background: #e27373;
     cursor: pointer;
     cursor: hand; }
     #work .project-1:hover .project-title, #work .project-2:hover .project-title {
-      background: #dc5555; }
+      background: #da4848; }
     #work .project-1:hover img, #work .project-2:hover img {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);

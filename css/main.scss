@@ -433,12 +433,12 @@ body {
         }
 
         &:hover {
-            background: lighten($work_color, 15%);
+            background: lighten($work_color, 12%);
             cursor: pointer;
             cursor: hand;
 
             .project-title {
-                background: lighten($work_color, 5%);
+                background: lighten($work_color, 2%);
             }
 
             img {
