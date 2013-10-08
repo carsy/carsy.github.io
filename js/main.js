@@ -32,6 +32,12 @@ $(document).ready(function(){
 				});
 			},
 
+			menuClick: function() {
+				$('.menu-item').click(function() {
+					
+				});
+			},
+
 			load: function() {
 				this.expanderClick();
 				this.menuHover();
