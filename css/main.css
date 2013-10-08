@@ -306,10 +306,11 @@ body {
     margin-top: 15px; }
     #work .project-1 .project-tags .tag, #work .project-2 .project-tags .tag {
       display: block;
-      margin-bottom: 2px; }
+      margin-bottom: 3px; }
       #work .project-1 .project-tags .tag span, #work .project-2 .project-tags .tag span {
-        padding: 0px 2px 0px 2px;
-        background: #dc5555; }
+        padding: 0px 3px 1px 3px;
+        background: #dc5555;
+        box-shadow: 1px 1px 1px #d84040; }
   #work .project-1:hover, #work .project-2:hover {
     background: #e27373;
     cursor: pointer;
