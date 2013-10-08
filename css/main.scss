@@ -417,11 +417,21 @@ body {
         width: 240px;
         background: lighten($work_color, 10%);
 
+        .project-content {
+            display: inline;
+
+            .project-img, .project-tags {
+                display: inline;
+                float: left;
+            }
+        }
+
         img {
             display: block;
             width: auto;
             height: 120px;
             margin-left: 10px;
+            margin-right: 10px;
 
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
@@ -435,12 +445,21 @@ body {
             background: $work_color;
         }
 
-        .project-title {
-            // background: $work_color;
-        }
+        .project-tags {
+            font-size: 0.5em;
+            display: inline;
+            text-align: left;
+            margin-top: 15px;
 
-        span {
-            display: inline-block;
+            .tag {
+                display: block;
+                margin-bottom: 2px;
+
+                span {
+                    padding: 0px 2px 0px 2px;
+                    background: lighten($work_color, 5%);
+                }
+            }
         }
 
         &:hover {
@@ -461,19 +480,12 @@ body {
 
     }
 
-    .project-2 img {
-        box-shadow: 0px 0px 5px gray;
-
-       // -webkit-transform: rotate3d(0.5, 1, 0, 20deg);
-        // -moz-transform: rotate3d(0.5, 1, 0, 20deg);
-        // -ms-transform: rotate3d(0.5, 1, 0, 20deg);
-        // -o-transform: rotate3d(0.5, 1, 0, 20deg);
-        // transform: rotate3d(0.5, 1, 0, 20deg);
+    .project-1 img {
+        margin-right: 0;
     }
 
-    &:hover {
-        // -webkit-transform: rotate(1deg);
-        // transform: rotate(1deg);
+    .project-2 img {
+        box-shadow: 0px 0px 5px gray;
     }
 }
 
@@ -517,11 +529,6 @@ body {
             }
         }
     }
-
-    &:hover {
-        // -webkit-transform: rotate(-1deg);
-        // transform: rotate(-1deg);
-    }
 }
 
 #misc {
@@ -549,11 +556,8 @@ body {
 
         cursor: pointer;
         cursor: hand;
-    }
 
-    &:hover {
-        // -webkit-transform: rotate(1deg);
-        // transform: rotate(1deg);
+        text-shadow: 2px 2px $misc_color;
     }
 }
 
