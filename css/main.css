@@ -102,7 +102,8 @@ a.symbol:before {
 /* "defaults" */
 * {
   text-decoration: none;
-  color: white; }
+  color: white;
+  outline: none; }
 
 html, body {
   height: 100%; }
@@ -110,9 +111,6 @@ html, body {
 body {
   background: white;
   overflow: auto; }
-
-* {
-  outline: none; }
 
 .dummy-separator-top, .dummy-separator-bottom {
   min-height: 60px; }
@@ -140,6 +138,12 @@ body {
     line-height: 0.9em;
     text-align: center;
     color: #49cbff; }
+  .expander:active {
+    -webkit-transform: scale(0.9, 0.9);
+    -moz-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    -o-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9); }
   .expander:hover {
     background: #49cbff; }
     .expander:hover div {
@@ -160,6 +164,12 @@ body {
     cursor: hand;
     width: 16px;
     height: 16px; }
+    .menu .menu-item:active {
+      -webkit-transform: scale(0.9, 0.9);
+      -moz-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+      -o-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9); }
     .menu .menu-item.about {
       background: #c8efff; }
       .menu .menu-item.about:hover {

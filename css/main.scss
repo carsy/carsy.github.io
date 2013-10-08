@@ -139,6 +139,7 @@ $nav_item_height: 240px;
 * {
     text-decoration: none;
     color: $bg_color;
+    outline: none;
 }
 
 html, body {
@@ -148,10 +149,6 @@ html, body {
 body {
     background: $bg_color;
     overflow: auto;
-}
-
-* {
-    outline: none;
 }
 
 .dummy-separator-middle {
@@ -175,6 +172,16 @@ body {
     display: inline-block;
 }
 
+@mixin onClick() {
+    &:active {
+        -webkit-transform: scale(0.9, 0.9);
+        -moz-transform: scale(0.9, 0.9);
+        -ms-transform: scale(0.9, 0.9);
+        -o-transform: scale(0.9, 0.9);
+        transform: scale(0.9, 0.9);
+    }
+}
+
 .expander {
     position: absolute;
     right: 480px;
@@ -195,6 +202,8 @@ body {
 
         color: lighten($about_color, 25%);
     }
+
+    @include onClick();
 
     &:hover {
         div {
@@ -223,6 +232,8 @@ body {
 
         width: 16px;
         height: 16px;
+
+        @include onClick();
 
         &.about {
             background: lighten($about_color, 50%);
