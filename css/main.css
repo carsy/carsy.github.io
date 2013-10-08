@@ -323,7 +323,8 @@ body {
 #work .project-1 img {
   margin-right: 0; }
 #work .project-2 img {
-  box-shadow: 0px 0px 5px gray; }
+  box-shadow: 0px 0px 5px gray;
+  margin-left: 25px; }
 
 #contacts .content-title {
   background: #ef863a; }
