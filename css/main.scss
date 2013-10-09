@@ -59,6 +59,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+
 @font-face {
     font-family: 'Mono Social Icons Font';
     src: url('../fonts/../fonts/MonoSocialIconsFont-1.10.eot');
@@ -124,6 +126,16 @@ a.symbol:before {
 
 
 
+@mixin onClick() {
+    &:active {
+        -webkit-transform: scale(0.9, 0.9);
+        -moz-transform: scale(0.9, 0.9);
+        -ms-transform: scale(0.9, 0.9);
+        -o-transform: scale(0.9, 0.9);
+        transform: scale(0.9, 0.9);
+    }
+}
+
 
 /***** COLORS *****/
 $bg_color: white;
@@ -151,41 +163,18 @@ body {
     overflow: auto;
 }
 
-.dummy-separator-middle {
-    // min-height: 5px;
-    // width: 100%;
-    // float: left;
-}
-
 .dummy-separator-top, .dummy-separator-bottom {
     min-height: 60px;
 }
 
-.content-preview {
-    background: #e0e0e0;
-}
-
-.symbol {
-    font-size: 5em;
-    line-height: .7em;
-    text-align: center;
-    display: inline-block;
-}
-
-@mixin onClick() {
-    &:active {
-        -webkit-transform: scale(0.9, 0.9);
-        -moz-transform: scale(0.9, 0.9);
-        -ms-transform: scale(0.9, 0.9);
-        -o-transform: scale(0.9, 0.9);
-        transform: scale(0.9, 0.9);
-    }
+.expander-container {
+    display: inline;
+    position: relative;
 }
 
 .expander {
     position: absolute;
-    right: 480px;
-    margin-right: 4px;
+    left: -1em;
     width: 0.9em;
 
     cursor: pointer;
@@ -213,10 +202,14 @@ body {
     }
 }
 
+.menu-container {
+    display: inline;
+    position: relative;
+    float: right;
+}
+
 .menu {
     position: absolute;
-    top: 0px;
-    left: 480px;
     width: 44px;
     height: 44px;
 
@@ -235,7 +228,7 @@ body {
 
         @include onClick();
 
-        &.about {
+        &.item-about {
             background: lighten($about_color, 50%);
 
             &:hover {
@@ -243,7 +236,7 @@ body {
             }
         }
 
-        &.work {
+        &.item-work {
             background: lighten($work_color, 30%);
 
             &:hover {
@@ -251,7 +244,7 @@ body {
             }
         }
 
-        &.contacts {
+        &.item-contacts {
             background: lighten($contacts_color, 20%);
 
             &:hover {
@@ -259,7 +252,7 @@ body {
             }
         }
 
-        &.misc {
+        &.item-misc {
             background: lighten($misc_color, 20%);
 
             &:hover {
@@ -268,6 +261,41 @@ body {
         }
     }
 }
+
+footer {
+    background: transparent;
+
+    .signature {
+        color: #a0a0a0;
+        font-family: 'Waiting for the Sunrise', cursive;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: right;
+    }
+}
+
+/*
+    ######################################################
+    ######################################################
+    ####################            ######################
+    ##################   NAVIGATION   ####################
+    ###################             ######################
+    ######################################################
+    ######################################################
+*/
+
+.content-preview {
+    background: #e0e0e0;
+}
+
+.symbol {
+    font-size: 5em;
+    line-height: .7em;
+    text-align: center;
+    display: inline-block;
+}
+
 
 @mixin nav_item_hover() {
     -webkit-transition: bottom .3s ease-in-out;
@@ -281,9 +309,13 @@ body {
     bottom: 240px;
 }
 
+.nav {
+    display: none;
+}
+
 .nav-item {
     position: relative;
-    // box-shadow: 0px 1px 2px gray;
+    display: none;
 
     width: 480px !important; // FIXED
 
@@ -330,7 +362,7 @@ body {
 }
 
 
-#about {
+.nav-about {
     .content-title {
         background: $about_color;
     }
@@ -395,7 +427,7 @@ body {
     }
 }
 
-#work {
+.nav-work {
     .content-title {
         background: $work_color;
     }
@@ -491,7 +523,7 @@ body {
     }
 }
 
-#contacts {
+.nav-contacts {
     .content-title {
         background: $contacts_color;
     }
@@ -533,7 +565,7 @@ body {
     }
 }
 
-#misc {
+.nav-misc {
     .content-title {
         background: $misc_color;
     }
@@ -542,7 +574,7 @@ body {
     }
 
     .preview-text {
-        line-height: 260px;
+        line-height: 240px;
         text-align: center;
 
         padding: 0;
@@ -563,17 +595,48 @@ body {
     }
 }
 
-footer {
-    background: transparent;
-    .signature {
-        color: #a0a0a0;
-        font-family: 'Waiting for the Sunrise', cursive;
-        font-style: italic;
-        font-weight: bold;
-        font-size: 1.5em;
-        text-align: right;
+
+/*
+    ######################################################
+    ######################################################
+    #######################         ######################
+    #####################   CONTENT   ####################
+    ######################          ######################
+    ######################################################
+    ######################################################
+*/
+
+.content {
+    .content-item {
+        display: none;
+        height: 480px;
+        width: 960px !important; // FIXED
+
+
+        font-family: 'Amatic SC', cursive;
+        font-size: 5em;
+        letter-spacing: 10px;
+        line-height: $nav_item_height * 2;
+        text-align: center;
+    }
+
+    .content-about {
+        background: $about_color;
+    }
+
+    .content-work {
+        background: $work_color;
+    }
+
+    .content-contacts {
+        background: $contacts_color;
+    }
+
+    .content-misc {
+        background: $misc_color;
     }
 }
+
 
 /* ==========================================================================
    Media Queries

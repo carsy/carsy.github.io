@@ -115,19 +115,13 @@ body {
 .dummy-separator-top, .dummy-separator-bottom {
   min-height: 60px; }
 
-.content-preview {
-  background: #e0e0e0; }
-
-.symbol {
-  font-size: 5em;
-  line-height: .7em;
-  text-align: center;
-  display: inline-block; }
+.expander-container {
+  display: inline;
+  position: relative; }
 
 .expander {
   position: absolute;
-  right: 480px;
-  margin-right: 4px;
+  left: -1em;
   width: 0.9em;
   cursor: pointer;
   cursor: hand;
@@ -149,10 +143,13 @@ body {
     .expander:hover div {
       color: #e2f7ff; }
 
+.menu-container {
+  display: inline;
+  position: relative;
+  float: right; }
+
 .menu {
   position: absolute;
-  top: 0px;
-  left: 480px;
   width: 44px;
   height: 44px;
   margin-left: 4px; }
@@ -170,28 +167,60 @@ body {
       -ms-transform: scale(0.9, 0.9);
       -o-transform: scale(0.9, 0.9);
       transform: scale(0.9, 0.9); }
-    .menu .menu-item.about {
+    .menu .menu-item.item-about {
       background: #c8efff; }
-      .menu .menu-item.about:hover {
+      .menu .menu-item.item-about:hover {
         background: #49cbff; }
-    .menu .menu-item.work {
+    .menu .menu-item.item-work {
       background: #f2bfbf; }
-      .menu .menu-item.work:hover {
+      .menu .menu-item.item-work:hover {
         background: #e99595; }
-    .menu .menu-item.contacts {
+    .menu .menu-item.item-contacts {
       background: #f7c098; }
-      .menu .menu-item.contacts:hover {
+      .menu .menu-item.item-contacts:hover {
         background: #f3a369; }
-    .menu .menu-item.misc {
+    .menu .menu-item.item-misc {
       background: #81cf81; }
-      .menu .menu-item.misc:hover {
+      .menu .menu-item.item-misc:hover {
         background: #49ba49; }
+
+footer {
+  background: transparent; }
+  footer .signature {
+    color: #a0a0a0;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: right; }
+
+/*
+    ######################################################
+    ######################################################
+    ####################            ######################
+    ##################   NAVIGATION   ####################
+    ###################             ######################
+    ######################################################
+    ######################################################
+*/
+.content-preview {
+  background: #e0e0e0; }
+
+.symbol {
+  font-size: 5em;
+  line-height: .7em;
+  text-align: center;
+  display: inline-block; }
 
 .expanded-card {
   bottom: 240px; }
 
+.nav {
+  display: none; }
+
 .nav-item {
   position: relative;
+  display: none;
   width: 480px !important; }
   .nav-item .item-content {
     overflow: hidden;
@@ -227,20 +256,20 @@ body {
     .nav-item .item-content:hover .content-preview {
       bottom: 240px; }
 
-#about .content-title {
+.nav-about .content-title {
   background: #008fc8; }
-#about .content-preview {
+.nav-about .content-preview {
   background: #00b3fb; }
-  #about .content-preview .preview-img {
+  .nav-about .content-preview .preview-img {
     float: left;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
     opacity: 0.85; }
-  #about .content-preview .preview-text {
+  .nav-about .content-preview .preview-text {
     display: inline;
     float: left;
     max-width: 230px; }
-    #about .content-preview .preview-text .text-title {
+    .nav-about .content-preview .preview-text .text-title {
       font-family: 'Sue Ellen Francisco', cursive;
       font-size: 2em;
       display: inline-block;
@@ -248,31 +277,31 @@ body {
       padding-left: 20px;
       width: 260px;
       background: #008fc8; }
-    #about .content-preview .preview-text .text {
+    .nav-about .content-preview .preview-text .text {
       display: inline-block;
       padding-left: 20px;
       font-size: 1em !important; }
-      #about .content-preview .preview-text .text .text-strong {
+      .nav-about .content-preview .preview-text .text .text-strong {
         display: inline-block;
         padding-left: 4px;
         padding-right: 4px;
         font-size: 1em !important; }
-        #about .content-preview .preview-text .text .text-strong:hover {
+        .nav-about .content-preview .preview-text .text .text-strong:hover {
           background: #008fc8; }
-  #about .content-preview img {
+  .nav-about .content-preview img {
     width: auto;
     height: 240px; }
-  #about .content-preview .text-name {
+  .nav-about .content-preview .text-name {
     font-size: 2em; }
 
-#work .content-title {
+.nav-work .content-title {
   background: #d84040; }
-#work .content-preview {
+.nav-work .content-preview {
   background: #dc5555; }
-#work .preview-text {
+.nav-work .preview-text {
   padding-top: 20px;
   padding-bottom: 0px; }
-#work .project-1, #work .project-2 {
+.nav-work .project-1, .nav-work .project-2 {
   display: inline;
   float: left;
   text-align: center;
@@ -280,12 +309,12 @@ body {
   height: 220px;
   width: 240px;
   background: #e16a6a; }
-  #work .project-1 .project-content, #work .project-2 .project-content {
+  .nav-work .project-1 .project-content, .nav-work .project-2 .project-content {
     display: inline; }
-    #work .project-1 .project-content .project-img, #work .project-1 .project-content .project-tags, #work .project-2 .project-content .project-img, #work .project-2 .project-content .project-tags {
+    .nav-work .project-1 .project-content .project-img, .nav-work .project-1 .project-content .project-tags, .nav-work .project-2 .project-content .project-img, .nav-work .project-2 .project-content .project-tags {
       display: inline;
       float: left; }
-  #work .project-1 img, #work .project-2 img {
+  .nav-work .project-1 img, .nav-work .project-2 img {
     display: block;
     width: auto;
     height: 120px;
@@ -294,71 +323,71 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
     opacity: 0.60; }
-  #work .project-1 .project-title, #work .project-2 .project-title {
+  .nav-work .project-1 .project-title, .nav-work .project-2 .project-title {
     margin-bottom: 20px;
     padding: 10px 0px 11px 0px;
     display: block;
     background: #d84040; }
-  #work .project-1 .project-tags, #work .project-2 .project-tags {
+  .nav-work .project-1 .project-tags, .nav-work .project-2 .project-tags {
     font-size: 0.5em;
     display: inline;
     text-align: left;
     margin-top: 15px; }
-    #work .project-1 .project-tags .tag, #work .project-2 .project-tags .tag {
+    .nav-work .project-1 .project-tags .tag, .nav-work .project-2 .project-tags .tag {
       display: block;
       margin-bottom: 3px; }
-      #work .project-1 .project-tags .tag span, #work .project-2 .project-tags .tag span {
+      .nav-work .project-1 .project-tags .tag span, .nav-work .project-2 .project-tags .tag span {
         padding: 0px 3px 1px 3px;
         background: #dc5555;
         box-shadow: 1px 1px 1px #d84040; }
-  #work .project-1:hover, #work .project-2:hover {
+  .nav-work .project-1:hover, .nav-work .project-2:hover {
     background: #e27373;
     cursor: pointer;
     cursor: hand; }
-    #work .project-1:hover .project-title, #work .project-2:hover .project-title {
+    .nav-work .project-1:hover .project-title, .nav-work .project-2:hover .project-title {
       background: #da4848; }
-    #work .project-1:hover img, #work .project-2:hover img {
+    .nav-work .project-1:hover img, .nav-work .project-2:hover img {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
       opacity: 1; }
-#work .project-1 img {
+.nav-work .project-1 img {
   margin-right: 0; }
-#work .project-2 img {
+.nav-work .project-2 img {
   box-shadow: 0px 0px 5px gray;
   margin-left: 25px; }
 
-#contacts .content-title {
+.nav-contacts .content-title {
   background: #ef863a; }
-#contacts .content-preview {
+.nav-contacts .content-preview {
   background: #f19452; }
-  #contacts .content-preview .preview-text {
+  .nav-contacts .content-preview .preview-text {
     padding-left: 0px;
     padding-right: 0px; }
-  #contacts .content-preview .container {
+  .nav-contacts .content-preview .container {
     display: inline-block;
     padding-left: 40px; }
-    #contacts .content-preview .container:hover {
+    .nav-contacts .content-preview .container:hover {
       background: #ef863a; }
-  #contacts .content-preview .col-left {
+  .nav-contacts .content-preview .col-left {
     text-align: right;
     font-family: 'Amatic SC', recursive;
     font-size: 2em;
     letter-spacing: 3px; }
-  #contacts .content-preview .col-right {
+  .nav-contacts .content-preview .col-right {
     text-align: left; }
-    #contacts .content-preview .col-right span {
+    .nav-contacts .content-preview .col-right span {
       line-height: 2.75em;
       padding-left: 20px; }
 
-#misc .content-title {
+.nav-misc .content-title {
   background: #40aa40; }
-#misc .content-preview {
+.nav-misc .content-preview {
   background: #49ba49; }
-#misc .preview-text {
-  line-height: 260px;
+.nav-misc .preview-text {
+  line-height: 240px;
   text-align: center;
   padding: 0; }
-#misc .symbol:hover {
+.nav-misc .symbol:hover {
   -webkit-transform: scale(1.5, 1.5);
   -moz-transform: scale(1.5, 1.5);
   -ms-transform: scale(1.5, 1.5);
@@ -368,15 +397,32 @@ body {
   cursor: hand;
   text-shadow: 2px 2px #40aa40; }
 
-footer {
-  background: transparent; }
-  footer .signature {
-    color: #a0a0a0;
-    font-family: 'Waiting for the Sunrise', cursive;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-align: right; }
+/*
+    ######################################################
+    ######################################################
+    #######################         ######################
+    #####################   CONTENT   ####################
+    ######################          ######################
+    ######################################################
+    ######################################################
+*/
+.content .content-item {
+  display: none;
+  height: 480px;
+  width: 960px !important;
+  font-family: 'Amatic SC', cursive;
+  font-size: 5em;
+  letter-spacing: 10px;
+  line-height: 480px;
+  text-align: center; }
+.content .content-about {
+  background: #008fc8; }
+.content .content-work {
+  background: #d84040; }
+.content .content-contacts {
+  background: #ef863a; }
+.content .content-misc {
+  background: #40aa40; }
 
 /* ==========================================================================
    Media Queries
