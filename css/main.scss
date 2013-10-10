@@ -124,8 +124,6 @@ a.symbol:before {
     src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff");
 }
 
-
-
 @mixin onClick() {
     &:active {
         -webkit-transform: scale(0.9, 0.9);

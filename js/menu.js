@@ -13,10 +13,6 @@ var menu = {
 					return;
 				}
 
-				$('.menu-item.expanded').removeClass('expanded');
-				$(this).addClass('expanded');
-
-
 				nav.events.expandItem(nav_item);
 			});
 		},

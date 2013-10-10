@@ -15,7 +15,11 @@ var expander = {
 				if( $(this).hasClass('back') ) {
 					document.location.hash = '';
 					$(this).removeClass('back');
-					$(this).html('+');
+					if( $('.expander-char').hasClass('expanded') )
+						$(this).html('-');
+					else
+						$(this).html('+');
+					
 					return;
 				}
 
@@ -23,6 +27,7 @@ var expander = {
 
 				$(this).toggleClass('expanded');
 
+				$('.content-title').toggleClass('expanded-card');
 				$('.content-preview').toggleClass('expanded-card');
 
 				if ($(this).hasClass('expanded'))
