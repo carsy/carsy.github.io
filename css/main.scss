@@ -242,12 +242,28 @@ body {
         width: 16px;
         height: 16px;
 
-        @include onClick();
+        // @include onClick();
+
+        &:hover {
+            -webkit-transform: scale(1.1, 1.1);
+            -moz-transform: scale(1.1, 1.1);
+            -ms-transform: scale(1.1, 1.1);
+            -o-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+        }
+        
+        &:active {
+            -webkit-transform: scale(0.9, 0.9);
+            -moz-transform: scale(0.9, 0.9);
+            -ms-transform: scale(0.9, 0.9);
+            -o-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+        }
 
         &.item-about {
             background: lighten($about_color, 50%);
 
-            &:hover {
+            &:hover, &.expanded {
                 background: lighten($about_color, 25%);
             }
         }
@@ -255,7 +271,7 @@ body {
         &.item-work {
             background: lighten($work_color, 30%);
 
-            &:hover {
+            &:hover, &.expanded {
                 background: lighten($work_color, 20%);
             }
         }
@@ -263,7 +279,7 @@ body {
         &.item-contacts {
             background: lighten($contacts_color, 20%);
 
-            &:hover {
+            &:hover, &.expanded {
                 background: lighten($contacts_color, 10%);
             }
         }
@@ -271,7 +287,7 @@ body {
         &.item-misc {
             background: lighten($misc_color, 20%);
 
-            &:hover {
+            &:hover, &.expanded {
                 background: lighten($misc_color, 5%);
             }
         }
