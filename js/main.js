@@ -1,10 +1,11 @@
 
 $(document).ready(function() {
 	expander.load();
+	menu.load();
 	nav.load();
 	content.load();
 
-	window.onhashchange = function() {
+	window.onhashchange = function() { // TODO
 		if( !document.location.hash ) {
 			nav.show();
 		}

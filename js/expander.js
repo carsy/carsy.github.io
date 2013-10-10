@@ -1,34 +1,34 @@
 var expander = {
-	states: { collaped: 'collapsed', expanded: 'expanded', back: 'back' },
+	states: { collapsed: 'collapsed', expanded: 'expanded', back: 'back' },
+
+	state: '',
 
 	init: function(config) {
 		this.state = config.state;
 	},
 
-	state: '',
 
 	events: {
 		onclick: function() {
 			$('.expander .expander-char').click(function() {
-				var expander = $(this);
 
-				if( expander.hasClass('back') ) {
+				if( $(this).hasClass('back') ) {
 					document.location.hash = '';
-					expander.removeClass('back');
-					expander.html('+');
+					$(this).removeClass('back');
+					$(this).html('+');
 					return;
 				}
-				
+
 				// else
 
-				expander.toggleClass('expanded');
+				$(this).toggleClass('expanded');
 
 				$('.content-preview').toggleClass('expanded-card');
 
-				if (expander.hasClass('expanded'))
-					expander.html('-');
+				if ($(this).hasClass('expanded'))
+					$(this).html('-');
 				else
-					expander.html('+');
+					$(this).html('+');
 			});
 		},
 
