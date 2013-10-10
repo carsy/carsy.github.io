@@ -123,15 +123,20 @@ body {
   position: absolute;
   left: -1em;
   width: 0.9em;
+  min-height: 0.9em;
+  min-width: 0.9em;
   cursor: pointer;
   cursor: hand;
   background: #c8efff;
   font-size: 1.8em;
   font-family: 'Waiting for the Sunrise', cursive; }
-  .expander div {
+  .expander .expander-char {
     line-height: 0.9em;
     text-align: center;
     color: #49cbff; }
+  .expander .back {
+    line-height: 1.5em;
+    font-size: 0.6em; }
   .expander:active {
     -webkit-transform: scale(0.9, 0.9);
     -moz-transform: scale(0.9, 0.9);
@@ -140,7 +145,7 @@ body {
     transform: scale(0.9, 0.9); }
   .expander:hover {
     background: #49cbff; }
-    .expander:hover div {
+    .expander:hover .expander-char {
       color: #e2f7ff; }
 
 .menu-container {

@@ -176,6 +176,8 @@ body {
     position: absolute;
     left: -1em;
     width: 0.9em;
+    min-height: 0.9em;
+    min-width: 0.9em;
 
     cursor: pointer;
     cursor: hand;
@@ -185,17 +187,22 @@ body {
     font-size: 1.8em;
     font-family: 'Waiting for the Sunrise', cursive;
 
-    div {
+    .expander-char {
         line-height: 0.9em;
         text-align: center;
 
         color: lighten($about_color, 25%);
     }
 
+    .back {
+        line-height: 1.5em;
+        font-size: 0.6em;
+    }
+
     @include onClick();
 
     &:hover {
-        div {
+        .expander-char {
             color: lighten($about_color, 55%);
         }
         background: lighten($about_color, 25%);

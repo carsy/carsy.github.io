@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+	expander.load();
 	nav.load();
 	content.load();
 

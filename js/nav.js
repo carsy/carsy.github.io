@@ -28,28 +28,14 @@ var nav = {
 	},
 
 	navEvents: {
-		expanderClick: function() {
-			$('.expander div').click(function() {
-				var expander = $(this);
-
-				expander.toggleClass('expanded');
-
-				$('.content-preview').toggleClass('expanded-card');
-
-				if (expander.hasClass('expanded'))
-					expander.html('-');
-				else
-					expander.html('+');
-			});
-		},
 
 		expandItem: function(nav_item) {
 			$('.nav').hide();
+			expander.events.expanderToBack();
 			content.show(nav_item);
 		},
 
 		load: function() {
-			this.expanderClick();
 		}
 	},
 
