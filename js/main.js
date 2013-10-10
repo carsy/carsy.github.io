@@ -5,12 +5,14 @@ $(document).ready(function() {
 	nav.load();
 	content.load();
 
-	window.onhashchange = function() { // TODO
+	window.onhashchange = function() {
 		if( !document.location.hash ) {
-			nav.show();
+			content.hide(nav.show);
 		}
 		else {
-			content.show(document.location.hash.substr(1));
+			nav.events.expandItem(document.location.hash.substr(1));
 		}
 	}
+
+	window.onhashchange();
 });

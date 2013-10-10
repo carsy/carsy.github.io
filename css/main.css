@@ -115,13 +115,21 @@ body {
 .dummy-separator-top, .dummy-separator-bottom {
   min-height: 60px; }
 
+.expander, .menu, .symbol {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 .expander-container {
   display: inline;
   position: relative; }
 
 .expander {
   position: absolute;
-  left: -1em;
+  left: -1.03em;
   width: 0.9em;
   min-height: 0.9em;
   min-width: 0.9em;
