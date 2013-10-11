@@ -115,6 +115,15 @@ body {
 .dummy-separator-top, .dummy-separator-bottom {
   min-height: 60px; }
 
+/*
+    ######################################################
+    ######################################################
+    ####################            ######################
+    ##################   CONTROLERS   ####################
+    ###################             ######################
+    ######################################################
+    ######################################################
+*/
 .expander, .menu, .symbol {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -174,7 +183,7 @@ body {
     cursor: hand;
     width: 16px;
     height: 16px; }
-    .menu .menu-item:hover {
+    .menu .menu-item:hover, .menu .menu-item.expanded {
       -webkit-transform: scale(1.1, 1.1);
       -moz-transform: scale(1.1, 1.1);
       -ms-transform: scale(1.1, 1.1);
@@ -430,12 +439,27 @@ footer {
   height: 480px;
   width: 960px !important;
   font-family: 'Amatic SC', cursive;
-  font-size: 5em;
-  letter-spacing: 10px;
-  line-height: 480px;
-  text-align: center; }
+  line-height: 2em; }
 .content .content-about {
-  background: #008fc8; }
+  background: #00b3fb; }
+  .content .content-about img {
+    float: left;
+    height: 100%; }
+  .content .content-about .content-title {
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-size: 3em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 25px 0px 15px 40px;
+    margin-top: 30px;
+    width: 520px;
+    background: #008fc8; }
+  .content .content-about .content-description {
+    margin: 0px 20px 0px 20px;
+    display: inline-block;
+    width: 520px;
+    line-height: 1.2em;
+    font-family: 'Anaheim', cursive; }
 .content .content-work {
   background: #d84040; }
 .content .content-contacts {
