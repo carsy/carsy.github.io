@@ -447,7 +447,7 @@ footer {
     height: 100%; }
   .content .content-about .content-title {
     font-family: 'Sue Ellen Francisco', cursive;
-    font-size: 2.5em;
+    font-size: 2.5em !important;
     text-transform: uppercase;
     display: inline-block;
     padding: 20px 0px 10px 20px;
@@ -463,6 +463,11 @@ footer {
     font-family: 'Anaheim', cursive; }
     .content .content-about .content-description a:hover {
       background: #008fc8; }
+.content .content-work, .content .content-contacts, .content .content-misc {
+  font-size: 5em;
+  line-height: 480px;
+  text-align: center;
+  letter-spacing: 10px; }
 .content .content-work {
   background: #d84040; }
 .content .content-contacts {

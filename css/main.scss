@@ -667,7 +667,7 @@ footer {
 
         .content-title {
             font-family: 'Sue Ellen Francisco', cursive;
-            font-size: 2.5em;
+            font-size: 2.5em !important;
             text-transform: uppercase;
 
             display: inline-block;
@@ -692,6 +692,13 @@ footer {
             }
         }
 
+    }
+
+    .content-work, .content-contacts, .content-misc {
+        font-size: 5em;
+        line-height: 480px;
+        text-align: center;
+        letter-spacing: 10px;
     }
 
     .content-work {
