@@ -1,10 +1,5 @@
 var expander = {
-	states: { collapsed: 'collapsed', expanded: 'expanded', back: 'back' },
-
-	state: '',
-
 	init: function(config) {
-		this.state = config.state;
 	},
 
 
@@ -48,7 +43,6 @@ var expander = {
 	},
 
 	load: function() {
-		this.state = this.states.collapsed; // default
 		this.events.onclick();
 	}
 }

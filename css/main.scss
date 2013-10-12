@@ -134,7 +134,6 @@ a.symbol:before {
     }
 }
 
-
 /***** COLORS *****/
 $bg_color: white;
 
@@ -159,6 +158,13 @@ html, body {
 body {
     background: $bg_color;
     overflow: auto;
+
+    &.about { // also change expander's color to match
+        // background: lighten($about_color, 55%);
+    }
+    &.work {
+        // background: lighten($work_color, 45%);
+    }
 }
 
 .dummy-separator-top, .dummy-separator-bottom {
@@ -338,11 +344,11 @@ footer {
 
 
 @mixin nav_item_hover() {
-    -webkit-transition: bottom .3s ease-in-out;
-    -moz-transition: bottom .3s ease-in-out;
-    -ms-transition: bottom .3s ease-in-out;
-    -o-transition: bottom .3s ease-in-out;
-    transition: bottom .3s ease-in-out;
+    -webkit-transition: bottom .3s ease-in-out .05s;
+    -moz-transition: bottom .3s ease-in-out .05s;
+    -ms-transition: bottom .3s ease-in-out .05s;
+    -o-transition: bottom .3s ease-in-out .05s;
+    transition: bottom .3s ease-in-out .05s;
 }
 
 .expanded-card {
@@ -652,7 +658,6 @@ footer {
         height: 480px;
         width: 960px !important; // FIXED
 
-
         font-family: 'Amatic SC', cursive;
         line-height: 2em;
     }
@@ -663,6 +668,9 @@ footer {
         img {
             float: left;
             height: 100%;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+            opacity: 0.85;
         }
 
         .content-title {
@@ -694,7 +702,7 @@ footer {
 
     }
 
-    .content-work, .content-contacts, .content-misc {
+    .content-contacts, .content-misc {
         font-size: 5em;
         line-height: 480px;
         text-align: center;
@@ -703,6 +711,84 @@ footer {
 
     .content-work {
         background: $work_color;
+        font-family: 'Anaheim', recursive;
+        background: lighten($work_color, 10%);
+        line-height: 1em;
+
+        .project-container {
+            width: 240px;
+            height: 480px;
+            display: inline;
+            float: left;
+
+            &:nth-child(2n) {
+                background: lighten($work_color, 12%);
+            }
+
+        }
+        .project-content {
+            padding: 0px 20px 0px 20px;
+        }
+
+        img {
+            height: 140px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+            opacity: .9;
+        }
+
+        .project-title {
+            background: $work_color;
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        .project-details, .project-description, .project-tags {
+            .subtitle  {
+                font-size: .85em;
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .sources, .desc {
+                margin-left: 10px;
+
+                a {
+                    padding: 0px 2px 0px 2px;
+                }
+
+                & a:hover {
+                    background: $work_color;
+                }
+            }
+        }
+
+        .project-tags {
+            font-size: 0.9em;
+            display: inline-;
+            text-align: left;
+            margin-top: 15px;
+
+            .tags-list {
+                margin-left: 10px;
+            }
+
+            .tag {
+                display: inline-block;
+
+                span {
+                    padding: 0px 3px 1px 3px;
+                    background: lighten($work_color, 5%);
+                    box-shadow: 1px 1px 1px $work_color;
+                    line-height: 1.7em;
+                }
+            }
+        }
     }
 
     .content-contacts {
