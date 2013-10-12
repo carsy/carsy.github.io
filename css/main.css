@@ -524,7 +524,30 @@ footer {
         box-shadow: 1px 1px 1px #d84040;
         line-height: 1.7em; }
 .content .content-contacts {
-  background: #ef863a; }
+  font-size: 2em;
+  background: #f19452;
+  line-height: 2.5em; }
+  .content .content-contacts .container {
+    padding-left: 40px;
+    display: inline-block; }
+    .content .content-contacts .container:hover {
+      background: #ef863a; }
+    .content .content-contacts .container:first-child {
+      margin-top: 40px; }
+  .content .content-contacts .col-left {
+    text-align: right;
+    font-size: 1.5em;
+    font-family: 'Amatic SC', recursive;
+    letter-spacing: 3px; }
+    .content .content-contacts .col-left span {
+      padding-right: 20px; }
+  .content .content-contacts .col-right {
+    text-align: left;
+    font-size: .6em !important;
+    letter-spacing: 3px;
+    font-family: 'Anaheim', recursive; }
+    .content .content-contacts .col-right span {
+      padding-left: 20px; }
 .content .content-misc {
   background: #40aa40; }
 

@@ -792,7 +792,44 @@ footer {
     }
 
     .content-contacts {
-        background: $contacts_color;
+        font-size: 2em;
+        background: lighten($contacts_color, 5%);
+        line-height: 2.5em;
+
+        .container {
+            padding-left: 40px;
+            display: inline-block;
+
+            &:hover {
+                background: $contacts_color;
+            }
+
+            &:first-child {
+                margin-top: 40px;
+            }
+        }
+
+        .col-left {
+            text-align: right;
+            font-size: 1.5em;
+            font-family: 'Amatic SC', recursive;
+            letter-spacing: 3px;
+
+            span {
+                padding-right: 20px;
+            }
+        }
+
+        .col-right {
+            text-align: left;
+            font-size: .6em !important;
+            letter-spacing: 3px;
+            font-family: 'Anaheim', recursive;
+
+            span {
+                padding-left: 20px;
+            }
+        }
     }
 
     .content-misc {
