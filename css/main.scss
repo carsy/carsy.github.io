@@ -73,19 +73,6 @@ textarea {
     font-style: normal;
 }
 
-.symbol, a.symbol:before {
-    font-family: 'Mono Social Icons Font';
-    -webkit-text-rendering: optimizeLegibility;
-    -moz-text-rendering: optimizeLegibility;
-    -ms-text-rendering: optimizeLegibility;
-    -o-text-rendering: optimizeLegibility;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -ms-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-}
 
 a.symbol:before {
     content: attr(title);
@@ -122,6 +109,27 @@ a.symbol:before {
     font-style: normal;
     font-weight: 400;
     src: local("Waiting for the Sunrise"), local("WaitingfortheSunrise"), url(http://themes.googleusercontent.com/static/fonts/waitingforthesunrise/v4/eNfH7kLpF1PZWpsetF-hazFoTnl3mJKNVVnPtbVHJow.woff) format("woff");
+}
+
+.symbol, a.symbol:before {
+    font-family: 'Mono Social Icons Font';
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    -ms-text-rendering: optimizeLegibility;
+    -o-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.symbol {
+    font-size: 5em;
+    line-height: .7em;
+    text-align: center;
+    display: inline-block;
 }
 
 @mixin onClick() {
@@ -333,13 +341,6 @@ footer {
 
 .content-preview {
     background: #e0e0e0;
-}
-
-.symbol {
-    font-size: 5em;
-    line-height: .7em;
-    text-align: center;
-    display: inline-block;
 }
 
 
@@ -657,9 +658,6 @@ footer {
         display: none;
         height: 480px;
         width: 960px !important; // FIXED
-
-        font-family: 'Amatic SC', cursive;
-        line-height: 2em;
     }
 
     .content-about {
@@ -700,13 +698,6 @@ footer {
             }
         }
 
-    }
-
-    .content-contacts, .content-misc {
-        font-size: 5em;
-        line-height: 480px;
-        text-align: center;
-        letter-spacing: 10px;
     }
 
     .content-work {
@@ -833,7 +824,23 @@ footer {
     }
 
     .content-misc {
-        background: $misc_color;
+        background: lighten($misc_color, 5%);
+        font-size: 1.8em;
+        line-height: 480px;
+        text-align: center;
+
+        .symbol:hover {
+            -webkit-transform: scale(1.5, 1.5);
+            -moz-transform: scale(1.5, 1.5);
+            -ms-transform: scale(1.5, 1.5);
+            -o-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+
+            cursor: pointer;
+            cursor: hand;
+
+            text-shadow: 2px 2px $misc_color;
+        }
     }
 }
 
