@@ -481,7 +481,6 @@ footer {
   .content .content-work img {
     height: 140px;
     margin-top: 20px;
-    margin-bottom: 20px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: .9; }
@@ -490,23 +489,29 @@ footer {
     margin-top: 20px;
     font-size: 1.5em;
     text-align: center;
-    padding: 20px; }
-  .content .content-work .project-details .subtitle, .content .content-work .project-description .subtitle, .content .content-work .project-tags .subtitle {
+    padding: 20px;
+    height: 16px; }
+  .content .content-work .project-details.project-description .subtitle, .content .content-work .project-description.project-description .subtitle {
+    margin-top: 20px; }
+  .content .content-work .project-details .subtitle, .content .content-work .project-description .subtitle {
     font-size: .85em;
     display: block;
     margin-bottom: 5px;
     font-weight: bold; }
-  .content .content-work .project-details .sources, .content .content-work .project-details .desc, .content .content-work .project-description .sources, .content .content-work .project-description .desc, .content .content-work .project-tags .sources, .content .content-work .project-tags .desc {
+  .content .content-work .project-details .sources, .content .content-work .project-details .desc, .content .content-work .project-description .sources, .content .content-work .project-description .desc {
     margin-left: 10px; }
-    .content .content-work .project-details .sources a, .content .content-work .project-details .desc a, .content .content-work .project-description .sources a, .content .content-work .project-description .desc a, .content .content-work .project-tags .sources a, .content .content-work .project-tags .desc a {
+    .content .content-work .project-details .sources a, .content .content-work .project-details .desc a, .content .content-work .project-description .sources a, .content .content-work .project-description .desc a {
       padding: 0px 2px 0px 2px; }
-    .content .content-work .project-details .sources a:hover, .content .content-work .project-details .desc a:hover, .content .content-work .project-description .sources a:hover, .content .content-work .project-description .desc a:hover, .content .content-work .project-tags .sources a:hover, .content .content-work .project-tags .desc a:hover {
+    .content .content-work .project-details .sources a:hover, .content .content-work .project-details .desc a:hover, .content .content-work .project-description .sources a:hover, .content .content-work .project-description .desc a:hover {
       background: #d84040; }
+  .content .content-work .project-sources {
+    margin-bottom: 15px;
+    margin-top: 5px; }
   .content .content-work .project-tags {
     font-size: 0.9em;
     display: inline-;
     text-align: left;
-    margin-top: 15px; }
+    margin-top: 5px; }
     .content .content-work .project-tags .tags-list {
       margin-left: 10px; }
     .content .content-work .project-tags .tag {

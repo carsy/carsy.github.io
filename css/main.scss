@@ -724,7 +724,6 @@ footer {
         img {
             height: 140px;
             margin-top: 20px;
-            margin-bottom: 20px;
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
             filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
             opacity: .9;
@@ -736,16 +735,22 @@ footer {
             font-size: 1.5em;
             text-align: center;
             padding: 20px;
+            height: 16px;
         }
 
+        .project-details, .project-description {
 
-        .project-details, .project-description, .project-tags {
+            &.project-description .subtitle {
+                margin-top: 20px;
+            }
+
             .subtitle  {
                 font-size: .85em;
                 display: block;
                 margin-bottom: 5px;
                 font-weight: bold;
             }
+
             .sources, .desc {
                 margin-left: 10px;
 
@@ -759,11 +764,16 @@ footer {
             }
         }
 
+        .project-sources {
+            margin-bottom: 15px;
+            margin-top: 5px;
+        }
+
         .project-tags {
             font-size: 0.9em;
             display: inline-;
             text-align: left;
-            margin-top: 15px;
+            margin-top: 5px;
 
             .tags-list {
                 margin-left: 10px;
