@@ -743,7 +743,7 @@ footer {
             &.proj-border {
                 margin: 10px 0px 15px 0px;
                 padding-bottom: 10px;
-                border-bottom: 1px dashed white;
+                border-bottom: 1px dashed lighten($work_color, 30%);
             }
 
             .subtitle  {

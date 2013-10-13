@@ -494,7 +494,7 @@ footer {
   .content .content-work .project-details.proj-border, .content .content-work .project-description.proj-border {
     margin: 10px 0px 15px 0px;
     padding-bottom: 10px;
-    border-bottom: 1px dashed white; }
+    border-bottom: 1px dashed #f2bfbf; }
   .content .content-work .project-details .subtitle, .content .content-work .project-description .subtitle {
     display: block;
     margin-bottom: 5px;
