@@ -480,7 +480,7 @@ footer {
     padding: 0px 20px 0px 20px; }
   .content .content-work img {
     height: 140px;
-    margin-top: 20px;
+    margin: 20px 0px 20px 0px;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
     opacity: .9; }
@@ -491,15 +491,17 @@ footer {
     text-align: center;
     padding: 20px;
     height: 16px; }
-  .content .content-work .project-details.project-description .subtitle, .content .content-work .project-description.project-description .subtitle {
-    margin-top: 20px; }
+  .content .content-work .project-details.proj-border, .content .content-work .project-description.proj-border {
+    margin: 10px 0px 15px 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed white; }
   .content .content-work .project-details .subtitle, .content .content-work .project-description .subtitle {
-    font-size: .85em;
     display: block;
     margin-bottom: 5px;
     font-weight: bold; }
   .content .content-work .project-details .sources, .content .content-work .project-details .desc, .content .content-work .project-description .sources, .content .content-work .project-description .desc {
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-size: 0.85em; }
     .content .content-work .project-details .sources a, .content .content-work .project-details .desc a, .content .content-work .project-description .sources a, .content .content-work .project-description .desc a {
       padding: 0px 2px 0px 2px; }
     .content .content-work .project-details .sources a:hover, .content .content-work .project-details .desc a:hover, .content .content-work .project-description .sources a:hover, .content .content-work .project-description .desc a:hover {
