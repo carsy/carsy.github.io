@@ -111,15 +111,9 @@ a.symbol:before {
   color: white;
   outline: none; }
 
-html, body {
-  height: 100%; }
-
 body {
   background: white;
   overflow: auto; }
-
-.dummy-separator-top, .dummy-separator-bottom {
-  min-height: 60px; }
 
 /*
     ######################################################
@@ -218,15 +212,36 @@ body {
       .menu .menu-item.item-misc:hover, .menu .menu-item.item-misc.expanded {
         background: #49ba49; }
 
+.main-container {
+  margin-top: 60px;
+  margin-bottom: 10px; }
+
 footer {
   background: transparent; }
+  footer .cv-container {
+    background: #c8efff;
+    width: 3em;
+    text-align: center;
+    cursor: pointer;
+    cursor: hand; }
+    footer .cv-container .cv {
+      color: #49cbff;
+      text-transform: uppercase;
+      font-family: 'Waiting for the Sunrise', cursive;
+      font-size: 1.5em;
+      font-weight: bold; }
+    footer .cv-container:hover {
+      background: #49cbff; }
+      footer .cv-container:hover .cv {
+        color: #e2f7ff; }
   footer .signature {
     color: #a0a0a0;
     font-family: 'Waiting for the Sunrise', cursive;
     font-style: italic;
     font-weight: bold;
     font-size: 1.5em;
-    text-align: right; }
+    text-align: right;
+    padding-right: 3px; }
 
 /*
     ######################################################

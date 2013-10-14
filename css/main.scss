@@ -149,18 +149,17 @@ $about_color: #008fc8;
 $work_color: #d84040;
 $contacts_color: #ef863a;
 $misc_color: #40aa40;
+$footer_color: #a0a0a0;
 
 $nav_item_height: 240px;
+
+
 
 /* "defaults" */
 * {
     text-decoration: none;
     color: $bg_color;
     outline: none;
-}
-
-html, body {
-    height: 100%;
 }
 
 body {
@@ -176,7 +175,7 @@ body {
 }
 
 .dummy-separator-top, .dummy-separator-bottom {
-    min-height: 60px;
+    // min-height: 60px;
 }
 
 /*
@@ -316,16 +315,49 @@ body {
     }
 }
 
+.main-container {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+
+
 footer {
     background: transparent;
 
+    .cv-container {
+        background: lighten($about_color, 50%);
+        width: 3em;
+        text-align: center;
+
+        cursor: pointer;
+        cursor: hand;
+
+        .cv {
+            color: lighten($about_color, 25%);
+            text-transform: uppercase;
+            font-family: 'Waiting for the Sunrise', cursive;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        &:hover {
+            background: lighten($about_color, 25%);
+
+            .cv {
+                color: lighten($about_color, 55%);
+            }
+        }
+    }
+
     .signature {
-        color: #a0a0a0;
+        color: $footer_color;
         font-family: 'Waiting for the Sunrise', cursive;
         font-style: italic;
         font-weight: bold;
         font-size: 1.5em;
         text-align: right;
+        padding-right: 3px;
     }
 }
 
