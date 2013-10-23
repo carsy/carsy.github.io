@@ -1,26 +1,27 @@
 var expander = {
-	init: function(config) {
-	},
+	init: function (config) {},
 
 
 	events: {
-		onclick: function() {
-			$('.expander .expander-char').click(function() {
+		onclick: function () {
+			$('.expander .expander-char').click(function () {
 
-				if( $(this).hasClass('back') ) {
+				$(this).toggleClass('expanded');
+
+				if ($(this).hasClass('back')) {
 					document.location.hash = '';
 					$(this).removeClass('back');
-					if( $('.expander-char').hasClass('expanded') )
+					if ($('.expander-char').hasClass('expanded'))
 						$(this).html('-');
 					else
 						$(this).html('+');
-					
+
+					$('.menu-item.expanded').removeClass('expanded');
+
 					return;
 				}
 
 				// else
-
-				$(this).toggleClass('expanded');
 
 				$('.content-title').toggleClass('expanded-card');
 				$('.content-preview').toggleClass('expanded-card');
@@ -32,17 +33,17 @@ var expander = {
 			});
 		},
 
-		expanderToBack: function() {
+		expanderToBack: function () {
 			$('.expander .expander-char').addClass('back').html('←');
 		},
 
-		backToExpander: function() {
+		backToExpander: function () {
 			$('.expander .expander-char').removeClass('back').html('+');
 		}
-		
+
 	},
 
-	load: function() {
+	load: function () {
 		this.events.onclick();
 	}
 }
