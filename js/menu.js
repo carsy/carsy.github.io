@@ -2,6 +2,7 @@ var menu = {
 	events: {
 		onclick: function() {
 			$('.menu-item').click(function(e) {
+				// extracts item type from class .item-<type>
 				var nav_item = $(this).attr('class').split(' ')[1].split('-')[1];
 
 				if( $(this).hasClass('expanded') ) {
