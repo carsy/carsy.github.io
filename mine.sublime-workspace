@@ -492,12 +492,27 @@
 	"buffers":
 	[
 		{
-			"contents": "[NuIEEE] Workshop de Latex - Certificado\nOlá,\n\nEm anexo segue o certificado digital. Houve um erro no certificado que enviei anteriormente, este já deverá estar bem.\nMais uma vez, se ainda não deixaste feedback do workshop podes fazê-lo aqui: http://bit.ly/nuieee-latex-feedback\n\nQualquer dúvida diz.\n\nCumprimentos,\nJosé Bateira\n\n\n",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 331,
-				"line_ending": "Unix",
-				"name": "[NuIEEE] Workshop de Latex - Certificado"
+				"buffer_size": 19196,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/main.js",
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/menu.js",
+			"settings":
+			{
+				"buffer_size": 932,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -680,7 +695,7 @@
 				"Package Control: Remove Package"
 			]
 		],
-		"width": 543.0
+		"width": 647.0
 	},
 	"console":
 	{
@@ -697,10 +712,12 @@
 	},
 	"file_history":
 	[
+		"/home/carsy/ws/mine/css/main.scss",
+		"/home/carsy/ws/mine/Gruntfile.js",
+		"/home/carsy/ws/mine/package.json",
+		"/home/carsy/ws/mine/js/expander.js",
 		"/home/carsy/ws/mine/index.html",
 		"/home/carsy/ws/mine/js/main.js",
-		"/home/carsy/ws/mine/css/main.scss",
-		"/home/carsy/ws/mine/js/expander.js",
 		"/home/carsy/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/carsy/.config/sublime-text-2/Packages/User/HTML.sublime-settings",
 		"/home/carsy/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
@@ -822,9 +839,7 @@
 		"/home/carsy/ws/spotter/app/styles/main.scss",
 		"/home/carsy/ws/spotter/app/main.scss",
 		"/home/carsy/ws/spotter/app/test.html",
-		"/home/carsy/ws/spotter/test.html",
-		"/home/carsy/Spotify/boilerplate-app/scripts/main.js",
-		"/home/carsy/Spotify/api-tutorial/index.html"
+		"/home/carsy/ws/spotter/test.html"
 	],
 	"find":
 	{
@@ -842,6 +857,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"twitter",
+			"nav_item_hover",
 			"required",
 			"\nreservation",
 			"&",
@@ -967,9 +984,7 @@
 			"chart",
 			"filerev",
 			"')\n",
-			"live",
-			"sub",
-			"add"
+			"live"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1013,23 +1028,23 @@
 			[
 				{
 					"buffer": 0,
+					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 331,
+						"buffer_size": 19196,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								278,
-								278
+								610,
+								610
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_name": "[NuIEEE] Workshop de Latex - Certificado",
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1073,7 +1088,152 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/menu.js",
+					"settings":
+					{
+						"buffer_size": 932,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								885,
+								885
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1130,20 +1290,32 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"css/main.scss"
+			],
+			[
+				"menu",
+				"js/menu.js"
+			],
+			[
 				"exp",
 				"js/expander.js"
 			],
 			[
-				"main",
-				"js/main.js"
+				"pack",
+				"package.json"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"inde",
+				"index.html"
 			],
 			[
 				"ind",
 				"index.html"
-			],
-			[
-				"inde",
-				"conferences/ieeetalks/index.html"
 			],
 			[
 				"sty",
@@ -1246,10 +1418,6 @@
 				"data/term.php"
 			],
 			[
-				"grunt",
-				"Gruntfile.js"
-			],
-			[
 				"content",
 				"sass/_content.scss"
 			],
@@ -1304,10 +1472,6 @@
 			[
 				"now",
 				"now.html"
-			],
-			[
-				"pack",
-				"package.json"
 			],
 			[
 				"in",
@@ -1636,10 +1800,6 @@
 			[
 				"views/",
 				"app/views/main.html"
-			],
-			[
-				"mainjs",
-				"app/scripts/controllers/main.js"
 			]
 		],
 		"width": 0.0
