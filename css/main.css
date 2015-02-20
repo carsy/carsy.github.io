@@ -275,19 +275,21 @@ footer {
       letter-spacing: 10px;
       line-height: 240px;
       text-align: center;
-      -webkit-transition: bottom .3s ease-in-out .05s;
-      -moz-transition: bottom .3s ease-in-out .05s;
-      -ms-transition: bottom .3s ease-in-out .05s;
-      -o-transition: bottom .3s ease-in-out .05s;
-      transition: bottom .3s ease-in-out .05s; }
+      bottom: 0px;
+      -webkit-transition: bottom .15s ease-in-out .05s;
+      -moz-transition: bottom .15s ease-in-out .05s;
+      -ms-transition: bottom .15s ease-in-out .05s;
+      -o-transition: bottom .15s ease-in-out .05s;
+      transition: bottom .15s ease-in-out .05s; }
     .nav-item .item-content .content-preview {
       min-height: 240px;
       position: relative;
-      -webkit-transition: bottom .3s ease-in-out .05s;
-      -moz-transition: bottom .3s ease-in-out .05s;
-      -ms-transition: bottom .3s ease-in-out .05s;
-      -o-transition: bottom .3s ease-in-out .05s;
-      transition: bottom .3s ease-in-out .05s; }
+      bottom: 0px;
+      -webkit-transition: bottom .15s ease-in-out .05s;
+      -moz-transition: bottom .15s ease-in-out .05s;
+      -ms-transition: bottom .15s ease-in-out .05s;
+      -o-transition: bottom .15s ease-in-out .05s;
+      transition: bottom .15s ease-in-out .05s; }
       .nav-item .item-content .content-preview * {
         color: white; }
       .nav-item .item-content .content-preview .preview-text {
