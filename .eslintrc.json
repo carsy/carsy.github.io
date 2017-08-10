@@ -1,0 +1,12 @@
+{
+    "root": true,
+    "extends": [
+        "@carsy/eslint-config/es6",
+        "@carsy/eslint-config/addons/es6-modules",
+        "@carsy/eslint-config/addons/browser",
+        "@carsy/eslint-config/addons/react"
+    ],
+    "globals": {
+        "process": true
+    }
+}

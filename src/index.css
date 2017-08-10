@@ -1,0 +1,16 @@
+body, html, #root {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    padding: 0;
+}
