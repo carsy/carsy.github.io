@@ -1,85 +1,28 @@
-/* eslint react/no-multi-comp: off */
+import React from 'react';
+import styled from 'styled-components';
 
-import React, { Component } from 'react';
+import Head from './components/head';
+import Card from './components/card';
 
-import './App.css';
+import './styles/fonts.css';
 
+const App = styled.div`
+    width: 100%;
+    height: 100%;
 
-// Animations
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-const initialState = `rotate(0), scale(0)`;
-const getRandom = array => array[Math.floor(Math.random() * array.length)];
-const transformFunctions = [
-    () => 'rotateZ(130deg)',
-    () => 'rotateZ(230deg)',
-    () => 'scale(2)',
-    () => 'scale(0.5)',
-];
-const getRandomAnimationTime = () => `${Math.random()}s`;
-const getRandomAnimation = (size) => ({
-    transform: `${getRandom(transformFunctions)()}`,
-    transformOrigin: 'center',
-    transition: `transform ${getRandomAnimationTime()} ease`,
-});
+    text-align: center;
+    background-color: #faffff;
+    background-position: center;
+    background-size: cover;
+`;
 
-
-// Positioning
-
-const vw = Math.round(Math.max(document.documentElement.clientWidth, window.innerWidth || 0));
-const vh = Math.round(Math.max(document.documentElement.clientHeight, window.innerHeight || 0));
-const center = (containerSize, size) => Math.round(containerSize / 2 - size / 2);
-
-
-// Compoments
-
-class Square extends Component {
-    componentDidMount() {
-        // setInterval(() => this.forceUpdate(), 2);
-    }
-    render() {
-        const { x, y, size: containerSize } = this.props;
-        const size = Math.round(containerSize / 4);
-
-        return (<div
-            className="square"
-            style={{
-                top: y + center(containerSize, size),
-                left: x + center(containerSize, size),
-                ...getRandomAnimation()
-            }}
-        />);
-    }
-};
-
-const Squares = ({ n }) => {
-    const squares = [];
-
-    for (let y = 0; y < n; ++y) {
-        for (let x = 0; x < n; ++x) {
-            squares.push({
-                x: Math.round(x * vw / n),
-                y: Math.round(y * vh / n),
-                size: Math.round(vw / n),
-            });
-        }
-    }
-
-    return (<div className="squares"> {
-        squares.map((props, index) => <Square key={ index } { ...props } />)
-    }</div>);
-};
-
-const App = () => (
-    <div className="app">
-        { <Squares n={ 20 } /> }
-    </div>
+export default () => (
+    <App>
+        <Head />
+        <Card />
+    </App>
 );
-
-export default App;
-
-/*
-
-square width = vw / n
-
-
-*/

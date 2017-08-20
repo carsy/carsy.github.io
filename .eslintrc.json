@@ -8,5 +8,8 @@
     ],
     "globals": {
         "process": true
+    },
+    "rules": {
+        "react/no-multi-comp": 0
     }
 }
