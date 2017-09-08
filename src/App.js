@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Head from './components/head';
 import Card from './components/card';
 
+import colors from './styles/colors';
 import './styles/fonts.css';
 
 const App = styled.div`
@@ -15,9 +16,21 @@ const App = styled.div`
     align-items: center;
 
     text-align: center;
-    background-color: #faffff;
     background-position: center;
     background-size: cover;
+
+    *::selection {
+        background: ${colors.cyan};
+        color: ${colors.darker};
+    }
+
+    animation: in 400ms forwards;
+
+    @keyframes in {
+        to {
+            background-color: ${colors.lighter};
+        }
+    }
 `;
 
 export default () => (

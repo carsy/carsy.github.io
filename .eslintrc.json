@@ -6,8 +6,14 @@
         "@carsy/eslint-config/addons/browser",
         "@carsy/eslint-config/addons/react"
     ],
+    "parserOptions":{
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        }
+    },
     "globals": {
-        "process": true
+        "process": true,
+        "setImmediate": false
     },
     "rules": {
         "react/no-multi-comp": 0

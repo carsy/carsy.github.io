@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 import layout from '../styles/layout';
 import data from '../data/info';
-import Avatar from './avatar';
 import typo from '../styles/typography';
-import '../styles/colors.css';
+import colors from '../styles/colors';
+import Avatar from './avatar';
+import { Timeline } from '../animations/timeline';
+import { animation } from '../animations/styles';
 
 const Container = styled.div`
     display: flex;
@@ -18,9 +20,12 @@ const Name = styled.div`
     font-weight: 400;
     font-size: 48px;
     letter-spacing: 1.4px;
-    color: #404040;
+    color: ${colors.fonts.title};
+    opacity: 0;
 
     margin: ${layout.gutter} 0 12px 0;
+
+    animation: ${props => animation(props.animation)};
 
     @media ${layout.xsmall} {
         margin: 20px 0 12px 0;
@@ -30,19 +35,27 @@ const Sub = styled.div`
     font-family: ${typo.fontFamilyCondensed};
     font-size: 18px;
     letter-spacing: 2.5px;
-    color: #606060;
-
+    color: ${colors.fonts.sub};
     margin: 0 0 36px 0;
+    opacity: 0;
+
+    animation: ${props => animation(props.animation)};
 `;
 const Description = styled.div`
     font-family: ${typo.fontFamily};
-    color: #494949;
+    color: ${colors.fonts.body};
     margin: 0 ${layout.gutter} 5px ${layout.gutter};
+    opacity: 0;
+
+    animation: ${props => animation(props.animation)};
 `;
 const EndDescription = styled.span`
     font-family: ${typo.fontFamilyCondensed};
     font-size: 8px;
-    color: #494949;
+    color: ${colors.fonts.body};
+    opacity: 0;
+
+    animation: ${props => animation(props.animation)};
 `;
 const Links = styled.div`
     display: flex;
@@ -50,6 +63,9 @@ const Links = styled.div`
     align-items: center;
 
     margin: ${layout.gutter};
+    opacity: 0;
+
+    animation: ${props => animation(props.animation)};
 `;
 const Logo = styled.img`
     height: ${layout.gutter};
@@ -57,19 +73,31 @@ const Logo = styled.img`
     margin: 10px;
 `;
 
-const Link = ({ url, imgSrc, altText }) => {
-    return (<a href={ url } target="_blank">
+const Link = ({ url, imgSrc, altText }) => (
+    <a href={ url } target="_blank">
         <Logo src={ imgSrc } alt={ altText } />
-    </a>);
-};
+    </a>
+);
 
 export default () => (
-    <Container>
-        <Avatar size="120px" />
-        <Name>{ data.name }</Name>
-        <Sub>{ data.sub }</Sub>
-        <Description>{ data.description }</Description>
-        <EndDescription>{ data.endDescription }</EndDescription>
-        <Links>{ data.links.map((link, i) => <Link key={ i } { ...link } />) }</Links>
-    </Container>
+    <Timeline>{ ({ animations }) => (
+        <Container>
+            { console.log('animations', animations) }
+            <Avatar
+                animation={ animations.avatar }
+                imageAnimation={ animations.image }
+            />
+            <Name animation={ animations.name } >{ data.name }</Name>
+            <Sub animation={ animations.sub } >{ data.sub }</Sub>
+            <Description animation={ animations.description }>
+                { data.description }
+            </Description>
+            <EndDescription animation={ animations.endDescription }>
+                { data.endDescription }
+            </EndDescription>
+            <Links animation={ animations.links }>
+                { data.links.map((link, i) => <Link key={ i } { ...link } />) }
+            </Links>
+        </Container>
+    )}</Timeline>
 );
