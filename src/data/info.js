@@ -6,7 +6,7 @@ import bandcampLogo from '../media/social/bandcamp.png';
 export default {
     name: 'Zé Bateira',
     sub: 'plant-powered javascripter',
-    description: 'I love to code, listen to music, hike, cook and bike',
+    description: 'I love to code, run, listen to music, hike, cook and bike',
     endDescription: 'Oh, and I only eat plants 🌱 because I love animals',
     links: [{
         url: 'https://github.com/carsy',
