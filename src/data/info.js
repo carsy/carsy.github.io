@@ -9,11 +9,11 @@ export default {
     description: 'I love to code, run, listen to music, hike, cook and bike',
     endDescription: 'Oh, and I only eat plants 🌱 because I love animals',
     links: [{
-        url: 'https://github.com/carsy',
+        url: 'https://github.com/zebateira',
         imgSrc: githubLogo,
         altText: 'Github',
     }, {
-        url: 'https://codepen.io/carsy',
+        url: 'https://codepen.io/zebateira',
         imgSrc: codepenLogo,
         altText: 'Codepen',
     }, {
