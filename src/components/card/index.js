@@ -15,7 +15,6 @@ const Link = ({ url, imgSrc, altText }) => (
 export default () => (
     <Timeline>{ ({ animations }) => (
         <Styles.Container>
-            { console.log('animations', animations) }
             <Avatar
                 animation={ animations.avatar }
                 imageAnimation={ animations.image }

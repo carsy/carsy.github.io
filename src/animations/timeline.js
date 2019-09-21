@@ -94,7 +94,6 @@ const steps = [
     },
 ].map((step, i, steps) => {
     i > 0 && forIn(steps[i - 1].animations, (previousAnimation, name) => {
-        console.log(name, previousAnimation);
         defaults(step.animations, { [name]: previousAnimation });
     });
 
