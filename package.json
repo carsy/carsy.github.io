@@ -26,6 +26,8 @@
   "devDependencies": {
     "@carsy/eslint-config": "^0.4.0",
     "@carsy/stylelint-config": "^0.2.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-gatsby": "^0.2.14",
     "eslint": "^6.4.0",
     "gh-pages": "^2.1.1",
     "stylelint": "^11.0.0"
