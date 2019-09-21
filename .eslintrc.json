@@ -14,5 +14,8 @@
     },
     "rules": {
         "react/no-multi-comp": 0
+    },
+    "globals": {
+        "__dirname": false
     }
 }

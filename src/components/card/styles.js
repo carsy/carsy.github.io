@@ -61,8 +61,8 @@ export const Links = styled.div`
 
     animation: ${props => animation(props.animation)};
 `;
-export const Logo = styled.img`
-    height: ${theme.layout.gutter};
-    width: ${theme.layout.gutter};
+export const Logo = styled.div`
+    height: 40px;
+    width: 40px;
     margin: 10px;
 `;

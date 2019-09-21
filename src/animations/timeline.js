@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import { keyframes } from 'styled-components';
 import forIn from 'lodash/forIn';
 import defaults from 'lodash/defaults';
@@ -105,25 +105,17 @@ const steps = [
     return step;
 });
 
-export default class Timeline extends Component {
-    constructor() {
-        super();
+export default function Timeline({ children }) {
+    const [currentStepNumber, setCurrentStepNumber] = useState(0);
 
-        this.state = { currentStepNumber: 0 };
-    }
+    const currentStep = steps[currentStepNumber];
+    const nextStepNumber = currentStepNumber + 1;
 
-    render() {
-        const { currentStepNumber } = this.state;
-        const { children } = this.props;
-        const currentStep = steps[currentStepNumber];
-        const nextStepNumber = currentStepNumber + 1;
+    currentStepNumber < steps.length - 1 &&
+        setTimeout(
+            () => setCurrentStepNumber(nextStepNumber),
+            currentStep.duration + 200 // TODO instead of using setTimeout, use animationend event
+        );
 
-        currentStepNumber < steps.length - 1 &&
-            setTimeout(
-                () => this.setState({ currentStepNumber: nextStepNumber }),
-                currentStep.duration + 200 // TODO instead of using setTimeout, use animationend event
-            );
-
-        return children(steps[currentStepNumber]);
-    }
+    return children(steps[currentStepNumber]);
 }
