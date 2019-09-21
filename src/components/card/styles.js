@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
 `;
+
 export const Name = styled.div`
     font-family: ${theme.typography.fontFamily};
     font-weight: 400;
@@ -25,6 +26,7 @@ export const Name = styled.div`
         margin: 20px 0 12px 0;
     }
 `;
+
 export const Sub = styled.div`
     font-family: ${theme.typography.fontFamilyCondensed};
     font-size: 18px;
@@ -35,6 +37,7 @@ export const Sub = styled.div`
 
     animation: ${props => animation(props.animation)};
 `;
+
 export const Description = styled.div`
     font-family: ${theme.typography.fontFamily};
     color: ${theme.colors.fonts.body};
@@ -43,6 +46,7 @@ export const Description = styled.div`
 
     animation: ${props => animation(props.animation)};
 `;
+
 export const EndDescription = styled.span`
     font-family: ${theme.typography.fontFamilyCondensed};
     font-size: 8px;
@@ -51,6 +55,7 @@ export const EndDescription = styled.span`
 
     animation: ${props => animation(props.animation)};
 `;
+
 export const Links = styled.div`
     display: flex;
     justify-content: center;
@@ -61,8 +66,19 @@ export const Links = styled.div`
 
     animation: ${props => animation(props.animation)};
 `;
+
 export const Logo = styled.div`
     height: 40px;
     width: 40px;
     margin: 10px;
+    opacity: 0.7;
+
+    transition:
+        transform 300ms cubic-bezier(.64,1.95,.3,.81),
+        opacity 300ms;
+
+    &:hover {
+        transform: scale(1.2);
+        opacity: 1;
+    }
 `;
