@@ -9,7 +9,7 @@ const steps = [
             avatar: {
                 animation: keyframes`
                     from {
-                        transform: translateY(150px) scale(9);
+                        transform: translateY(-1000px) scale(2);
                         opacity: 0;
                     }
 
