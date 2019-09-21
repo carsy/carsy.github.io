@@ -106,7 +106,7 @@ const steps = [
     return step;
 });
 
-export class Timeline extends Component {
+export default class Timeline extends Component {
     constructor() {
         super();
 

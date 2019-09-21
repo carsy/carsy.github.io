@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
 
-export const animation = ({ animation, duration = 1000, func = 'ease', delay = 0 } = {}) =>
-    `${animation} ${duration}ms ${func} ${delay}ms forwards`;
+export function animation({ animation, duration = 1000, func = 'ease', delay = 0 } = {}) {
+    return css`${animation} ${duration}ms ${func} ${delay}ms forwards`;
+}

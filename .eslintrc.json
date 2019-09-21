@@ -7,13 +7,10 @@
         "@carsy/eslint-config/addons/react"
     ],
     "parserOptions":{
+        "ecmaVersion": 9,
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true
         }
-    },
-    "globals": {
-        "process": true,
-        "setImmediate": false
     },
     "rules": {
         "react/no-multi-comp": 0

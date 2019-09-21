@@ -1,7 +1,7 @@
-import githubLogo from '../media/social/github.png';
-import codepenLogo from '../media/social/codepen.png';
-import linkedinLogo from '../media/social/linkedin.png';
-import bandcampLogo from '../media/social/bandcamp.png';
+import githubLogo from '../images/social/github.png';
+import codepenLogo from '../images/social/codepen.png';
+import linkedinLogo from '../images/social/linkedin.png';
+import bandcampLogo from '../images/social/bandcamp.png';
 
 export default {
     name: 'Zé Bateira',
