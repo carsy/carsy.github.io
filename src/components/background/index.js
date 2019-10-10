@@ -28,7 +28,7 @@ export default function Baackground() {
 
     return (
         <Styles.Background>
-            <Image fluid={backgroundImage.fluid} alt="Blurred Background" style={{ height: '100%' }} />
+            {/* <Image fluid={backgroundImage.fluid} alt="Blurred Background" style={{ height: '100%' }} /> */}
         </Styles.Background>
     );
 }

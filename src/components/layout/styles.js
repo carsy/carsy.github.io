@@ -33,7 +33,7 @@ export const Layout = styled.div`
     background-size: cover;
 
     *::selection {
-        background: ${theme.colors.red};
+        background: ${theme.colors.grey};
         color: ${theme.colors.lighter};
     }
 

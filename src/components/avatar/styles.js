@@ -9,9 +9,9 @@ export const Avatar = styled.div`
     height: 150px;
     margin: ${theme.layout.gutter} 0 0 0;
     border-radius: 100%;
-    box-shadow: 0 2px 2px ${theme.colors.redDarker};
+    box-shadow: 0 2px 2px ${theme.colors.darkGrey};
     cursor: pointer;
-    background-color: ${theme.colors.red};
+    background-color: ${theme.colors.grey};
 
     animation: ${props => animation(props.animation)};
 `;

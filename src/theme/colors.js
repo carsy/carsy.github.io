@@ -12,6 +12,8 @@ export default {
     pink: '#ff60b4',
     pinkDark: '#b94482',
     pinkDarker: '#852f5c',
+    grey: '#4c7e96',
+    darkGrey: '#2c4855',
 
     fonts: {
         title: '#404040',
