@@ -41,5 +41,8 @@ module.exports = {
                 trackingId: 'UA-45298018-1',
             },
         },
+        {
+            resolve: 'gatsby-plugin-styled-components',
+        },
     ],
 };
