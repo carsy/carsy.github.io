@@ -36,12 +36,4 @@ export const Layout = styled.div`
         background: ${theme.colors.grey};
         color: ${theme.colors.lighter};
     }
-
-    animation: in 400ms forwards;
-
-    @keyframes in {
-        to {
-            background-color: ${theme.colors.lighter};
-        }
-    }
 `;
