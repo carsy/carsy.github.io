@@ -1,15 +1,15 @@
 import React from 'react';
 
-import Layout from '../components/layout';
-import Seo from '../components/seo';
-import Card from '../components/card';
-import Background from '../components/background';
+import Layout from '../shared/components/layout';
+import Seo from '../shared/components/seo';
+import Content from '../shared/components/content';
+import Background from '../shared/components/background';
 
 const IndexPage = () => (
     <Layout>
         <Seo />
         <Background />
-        <Card />
+        <Content />
     </Layout>
 );
 

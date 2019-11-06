@@ -1,0 +1,22 @@
+{
+    "name": "Zé Bateira",
+    "caption": "🌱 plant-powered javascripter",
+    "description": "I love to code, run, listen to music, hike, cook and bike.",
+    "links": [{
+        "src": "github.png",
+        "url": "https://github.com/zebateira",
+        "altText": "Github"
+    }, {
+        "src": "codepen.png",
+        "url": "https://codepen.io/zebateira",
+        "altText": "Codepen"
+    }, {
+        "src": "linkedin.png",
+        "url": "https://linkedin.com/in/zebateira/",
+        "altText": "Linkedin"
+    }, {
+        "src": "bandcamp.png",
+        "url": "https://bandcamp.com/zebateira",
+        "altText": "Bandcamp"
+    }]
+}
