@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function link({ children, url }) {
+export default function link({ children, href }) {
     return (
-        <a href={ url } target="_blank">
+        <a href={ href } target="_blank">
             { children }
         </a>
     );
