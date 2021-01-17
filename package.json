@@ -2,8 +2,16 @@
   "name": "zebateira-personal-website",
   "version": "2.0.0",
   "private": true,
+  "scripts": {
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "serve": "gatsby serve",
+    "develop": "gatsby develop",
+    "clean": "gatsby clean && rm -rf node_modules .package-lock.json"
+  },
   "dependencies": {
-    "gatsby": "^2.15.20",
+    "gatsby": "^2.30.3",
     "gatsby-image": "^2.2.20",
     "gatsby-plugin-google-analytics": "^2.1.17",
     "gatsby-plugin-manifest": "^2.2.18",
@@ -14,24 +22,19 @@
     "gatsby-transformer-json": "^2.2.9",
     "gatsby-transformer-sharp": "^2.2.16",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1"
-  },
-  "scripts": {
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
-    "serve": "gatsby serve",
-    "develop": "gatsby develop"
   },
   "devDependencies": {
     "@carsy/eslint-config": "^0.4.0",
     "@carsy/stylelint-config": "^0.2.0",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.14",
+    "core-js": "^2.6.12",
     "eslint": "^6.4.0",
+    "eslint-plugin-react": "^7.17.0",
     "gh-pages": "^2.1.1",
     "stylelint": "^11.0.0"
   }

@@ -10,5 +10,5 @@ export const Background = styled.div`
     left: 0;
     opacity: 0.3;
 
-    background-color: ${theme.colors.grey};
+    background-color: ${theme.colors.secondary};
 `;

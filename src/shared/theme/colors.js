@@ -15,6 +15,10 @@ export default {
     grey: '#4c7e96',
     darkGrey: '#2c4855',
 
+    primary: '#a75a7e',
+    primaryDark: '#843457',
+    secondary: '#d6f3d4',
+
     fonts: {
         title: '#404040',
         caption: '#606060',
